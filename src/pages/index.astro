@@ -1,0 +1,40 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Carrusel from '../components/Carrusel.astro';
+import Navbar from '../components/Navbar.astro';
+import CardComunidad from '../components/CardComunidad.astro';
+import Navbar1 from '../components/Navbar1.astro';
+import Hero from '../components/Hero.astro';
+
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Landing Page</title>
+    <link rel="stylesheet" href="../styles/global.css">
+  </head>
+  <body>
+   <Navbar />
+    <Navbar1 />
+    <Hero/>
+   <!--  <CardComunidad
+    title="Comunidad Volver a Creer"
+    image='/images/red-heart.png'
+    subtitle="Nuestra modalidad deEmptyEntries es residencial (internación), en la cual se implementa la metodigans de tratamiento cognitivo-conductual"
+   />
+   <CardComunidad
+    title="Equipo"
+    image='/images/team.png'
+    subtitle="Contamos con un equipo Clínico Profesional, altamente comprometidos y calificados para la atención en todo el proceso terapéutico. Equipo compuesto por: Terapeutas, Psicólogo especializado en adicciones , Personal Trainer. Contamos con convenios en Atención Psiquiátrica."
+	
+  > --> 
+    <main>
+      <!-- Aquí irán otros componentes como HeroSection, Features, etc. -->
+    </main>
+  </body>
+</html>
