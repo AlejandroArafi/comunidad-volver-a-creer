@@ -1,0 +1,76 @@
+---
+
+---
+
+
+<section class="form-container">
+
+    <form action="form" method="post">
+    
+        <label for="name" ></label>
+        <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+    
+        <label for="email"></label>
+        <input type="email" id="email" name="email" placeholder="Ingresa tu email">
+        
+        <label for="Telefono"></label>
+        <input type="tel" name="Telefono" id="" placeholder="Ingresa tu telefono">
+       
+        <label for="message"></label>
+        <textarea id="message" name="message" placeholder="Ingresa tu consulta"></textarea>
+        <button type="submit" class="form-button">Enviar</button>
+    
+    </form>
+    
+    </section>
+    
+    <style>
+    
+        .form-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10rem;
+    
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container label {
+            color: black;
+            margin-bottom: 0.5rem;
+        }
+        .form-container input, textarea {
+            width: 300px;
+            margin-top: 0.5rem;
+            padding: 0.5rem;  
+            border-bottom: 2px solid #B2E0C4;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 5px;
+            background: white;
+            color: #B2E0C4;
+        }
+        .form-container textarea {
+            border-bottom: none;
+            height: 100px;
+            resize: none;
+        }
+    
+        .form-button {
+            background-color: #B2E0C4;
+           width: 100%;
+           max-width: 300px;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        .form-button:hover {
+            background-color: #8ad7a7;
+        }
+    
+    </style>
