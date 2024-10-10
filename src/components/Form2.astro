@@ -1,0 +1,131 @@
+---
+
+---
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<div class="form-title-container">
+<h2 class="form-title">Evaluacion y Orientacion Gratis!</h2>
+<h3 class="form-subtitle">Dejanos tus datos y te contactaremos</h3>
+</div>
+
+<!-- form -->
+<section class="form-container">
+<form action="form" method="post">
+
+    <!-- name -->
+    <div class="input-container">
+        <i class="fas fa-user"></i>
+        <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+    </div>
+    
+     <!-- email -->
+    <div class="input-container">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="email" name="email" placeholder="Ingresa tu email">
+    </div>
+
+    <!-- Telefono -->
+     <div class="input-container">
+        <i class="fas fa-phone-alt"></i>
+        <input type="tel" name="Telefono" id=""  placeholder="Ingresa tu telefono" >
+    </div>
+    <!-- message -->
+    <div class="textarea-container">
+        <i class="fas fa-edit"></i>
+        <textarea  id="message" name="message" placeholder="Como podemos ayudarte?"></textarea>
+    </div>
+    <!-- button -->
+    <button type="submit" class="form-button">Enviar</button>
+    </form>
+    
+    </section>
+</section>
+
+
+<style>
+
+    .form-title-container {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .form-title, .form-subtitle {
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .form-container {
+        display: flex;
+        justify-content: center;
+    }
+
+  
+    .input-container i{
+      margin-right: 3px;
+    }
+
+    .textarea-container {
+        display: flex;
+        align-items: first baseline ;
+    }
+    .textarea-container i{
+        margin-right: 3px;
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .form-container form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        padding: 2rem 1rem;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .form-container input, textarea {
+        width: 300px;
+        margin-bottom: 1rem;
+        padding: 0.5rem;  
+        border: 2px solid #ffffff;
+        font-family: 'Montserrat', sans-serif;
+        border-radius: 15px;
+        background: rgb(247, 247, 247);
+       
+    }
+
+    input::placeholder {
+      
+    font-size: 16px; /* Tamaño de fuente */
+    font-family: 'Montserrat', sans-serif; /* Familia de fuente */
+    }
+
+    input:focus, textarea:focus {
+        outline: none;
+        border: 2px solid #08e7ef2b !important;
+        border-radius: 15px;
+    }
+
+    .form-button {
+        background-color: #B2E0C4;
+       width: 100%;
+       border-radius: 15px;
+    
+       padding: 0.75rem;
+       color: #000000;
+       font-family: 'Montserrat', sans-serif;
+       font-size: 16px;
+       cursor: pointer;
+
+    }
+
+ 
+    
+</style>

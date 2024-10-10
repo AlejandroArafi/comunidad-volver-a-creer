@@ -6,7 +6,8 @@
 <section class="form-container">
 
     <form action="form" method="post">
-    
+    <h2 class="form-title">Evaluacion y Orientacion Gratis!</h2>
+    <h3 class="form-subtitle">Dejanos tus datos y te contactaremos</h3>
         <label for="name" ></label>
         <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
     
@@ -25,7 +26,16 @@
     </section>
     
     <style>
-    
+    .form-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.6rem;
+    }
+    .form-subtitle {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+    }
+
         .form-container {
             display: flex;
             justify-content: center;
@@ -60,7 +70,7 @@
             background-color: #B2E0C4;
            width: 100%;
            max-width: 300px;
-            color: black;
+            color: rgb(0, 0, 0);
             border: none;
             border-radius: 5px;
             padding: 0.5rem 1rem;
