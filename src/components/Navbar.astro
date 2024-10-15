@@ -4,8 +4,8 @@
 
 <section class="nav-icons">
   <a href="mailto: " class="mail-logo">
-     <img src="/images/email-1.png" alt="mail">contacto@comunidadvolveracreer.cl</a>
-  <a href="https://wa.me/56932496264"><img src="/images/phone.png" alt="phone">+569 3249 6264</a>
+     <img src="/images/email-1.png" alt="mail"> <span class="contact-text">contacto@comunidadvolveracreer.cl</span>  </a>
+  <a href="https://wa.me/56932496264"><img src="/images/phone.png" alt="phone"><span class="contact-text">+569 3249 6264</span></a>
 </section>
 
 <style >
@@ -38,6 +38,67 @@
     margin-right: 8px;
   }
 
+@media (max-width: 768px) {
+    .nav-icons {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: 1rem;
+      margin-top: 1rem;
+      gap: 10px;
+    }
+
+    .nav-icons a {
+      font-size: 1rem;
+    }
+
+    .nav-icons img {
+      width: 18px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-icons {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: 1rem;
+      margin-top: 1rem;
+      gap: 10px;
+    }
+
+    .nav-icons a {
+      font-size: 1rem;
+    }
+
+    .nav-icons img {
+      width: 18px;
+    }
+  }
+
+  /*media query para celulares*/
+
+  @media screen and (max-width: 768px) {
+    .contact-text {
+      display: none;
+    }
+
+    .nav-icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      gap: 0;
+      margin-left: 10px;
+    }
+
+    .nav-icons a {
+      margin: 0; /* Asegura que no haya márgenes adicionales entre los enlaces */
+      padding: 0; /* Elimina cualquier padding en los enlaces */
+    }
+   .nav-icons img {
+    width: 30px;
+    margin-left: 50px;
+    margin-left: 20px;
+   }
+  }
 
 
 </style>
