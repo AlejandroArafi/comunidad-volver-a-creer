@@ -9,14 +9,18 @@
     <li><a href="#">Tratamiento</a></li>
     <li><a href="/form">Contacto</a></li>
    </ul>
+   <div class="more-icon-container">
+    <a href="#" class="more-icon">
+      <img src="/images/more.png" alt="">
+    </a>
+  </div>
 </section>
+
 
 <style>
 .navbar-container {
     margin-top: 2rem;
 }
-
-
 
 .navbar-container .navbar-list {
   display: flex;
@@ -37,6 +41,7 @@
   position: relative;
 
 }
+
 .navbar-list li a::after {
   content: '';
   position: absolute;
@@ -53,13 +58,13 @@
   width: 100%; /* Muestra el subrayado completo al hacer hover o si está activo */
 }
 
-
-
 .navbar-list li a {
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-
+.more-icon-container{
+  display: none;
+}
 
     @font-face {
     font-family: 'Montserrat';
@@ -68,5 +73,25 @@
     font-style: normal;
   }
 
-  
+
+  /*movile*/
+
+  @media (max-width: 768px) {
+
+  .navbar-container .more-icon-container {
+    display: flex;
+    justify-content: flex-end;
+   margin-right: 1rem;
+  }
+
+.more-icon {
+  display: block;
+ }
+
+ .navbar-list {
+  display: none;
+ }
+
+}
+
 </style>
