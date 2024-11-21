@@ -141,4 +141,20 @@
 </style>
 
 <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+const navbarList = document.querySelector('.navbar-list');
+const closeIcon = document.querySelector('.close-icon');
+
+if (hamburger && navbarList && closeIcon) {
+  hamburger.addEventListener('click', () => {
+    navbarList.classList.toggle('active');
+  });
+
+  closeIcon.addEventListener('click', (e) => {
+    e.preventDefault();
+    navbarList.classList.remove('active');
+  });
+}
+  });
 </script>
