@@ -4,7 +4,7 @@
 
 <section class="hero-container">
 
-   <img src="/images/Logo.png" alt="heart" class="logo">
+   <img src="/images/Logo.png" alt="logo" class="logo">
     <h1 class="title-hero">Centro de rehabilitación de adicciones</h1>
     <hr class="top-line">
     
@@ -17,10 +17,16 @@
 
 <style>
 
+/*mueve el hero hacia arr*/
+  .hero-container {
+    position: relative;
+    top: -6rem;
+  }
+
   .logo {
     width: 200px;
     height: 200px;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
     .hero-container {
@@ -82,6 +88,13 @@
   .button-hero:hover {
     background-color: #f48fb1;
   }
+     .top-line {
+        border-top: 2px solid #f48fb18a;
+        width: 50%;
+        margin-bottom: 0.5rem;
+        
+      }
+
 
 
     @font-face {
@@ -91,12 +104,7 @@
         font-style: normal;
       }
 
-      .top-line {
-        border-top: 2px solid #f48fb18a;
-        width: 40%;
-        
-      }
-
+   
 
       @media screen and (max-width: 768px) {  
         .logo {

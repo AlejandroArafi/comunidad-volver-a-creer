@@ -1,0 +1,31 @@
+/* carrusel.css */
+.carrusel-container {
+    width: 95%;
+    /* Asegura que el contenedor ocupe todo el ancho */
+
+    /* Añade un padding de 20px a la izquierda y derecha */
+    box-sizing: border-box;
+    /* Asegura que el padding no afecte el tamaño total del contenedor */
+}
+
+.carrusel {
+    width: 100%;
+    /* Asegura que el carrusel ocupe el 100% de su contenedor */
+    margin: 0 auto;
+    /* Centra el carrusel horizontalmente */
+}
+
+.carrusel .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel img {
+    width: 100%;
+    /* Asegura que las imágenes ocupen el 100% del ancho */
+    height: 100%;
+    /* Asegura que las imágenes ocupen el 100% de la altura */
+    object-fit: cover;
+    /* Hace que las imágenes cubran el área sin distorsionarse */
+}
