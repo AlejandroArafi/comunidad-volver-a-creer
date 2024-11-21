@@ -1,102 +1,160 @@
----
-
----
-
 <section class="navbar-container">
-   <ul class="navbar-list">
+  <ul class="navbar-list">
     <li><a href="/" class="active">Inicio</a></li>
     <li><a href="#">Nuestra comunidad</a></li>
     <li><a href="#">Tratamiento</a></li>
     <li><a href="/form">Contacto</a></li>
-   </ul>
-   <div class="more-icon-container">
-    <a href="#" class="more-icon">
-      <img src="/images/more.png" alt="">
+
+    <!-- Cruz al pie del menú -->
+    <li class="close-menu">
+      <a href="#" id="close-icon">
+        <img src="/images/close.png" alt="Cerrar menú">
+      </a>
+    </li>
+  </ul>
+
+  <div class="more-icon-container">
+    <a href="#" class="more-icon" id="hamburger">
+      <img src="/images/more.png" alt="hamburger icon">
     </a>
   </div>
 </section>
 
-
 <style>
-.navbar-container {
+  .navbar-container {
     margin-top: 2rem;
-}
+  }
 
-.navbar-container .navbar-list {
-  display: flex;
-  gap: 20px;
-  justify-content: end;
-  margin-right: 3rem;
-}
+  .navbar-container .navbar-list {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    margin-right: 3rem;
+  }
 
-.navbar-container .navbar-list li {
-  list-style: none;
-  font-size: 1.2rem;
-  font-family: 'Montserrat', sans-serif;
-}
+  .navbar-container .navbar-list li {
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+  }
 
-.navbar-list li a {
-  text-decoration: none;
-  color: #000;
-  position: relative;
+  .navbar-list li a {
+    text-decoration: none;
+    color: #000;
+    position: relative;
+  }
 
-}
+  .navbar-list li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #FFB74D;
+    transition: width 0.3s ease-in-out;
+  }
 
-.navbar-list li a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px; /* Ajusta la posición del subrayado */
-  width: 0;
-  height: 2px;
-  background-color: #FFB74D; /* Color del subrayado */
-  transition: width 0.3s ease-in-out;
-}
+  .navbar-list li a:hover::after,
+  .navbar-list li a.active::after {
+    width: 100%;
+  }
 
-.navbar-list li a:hover::after,
-.navbar-list li a.active::after {
-  width: 100%; /* Muestra el subrayado completo al hacer hover o si está activo */
-}
-
-.navbar-list li a {
+  .navbar-list li a {
     transition: color 0.3s ease, text-decoration 0.3s ease;
-}
+  }
 
-.more-icon-container{
-  display: none;
-}
+  .more-icon-container {
+    display: none;
+  }
+  
+  .close-menu {
+    display: none;
+  }
 
-    @font-face {
+  @font-face {
     font-family: 'Montserrat';
     src: url('/public/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
 
-
-  /*movile*/
-
   @media (max-width: 768px) {
+    .navbar-container .more-icon-container {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 1rem;
+    }
 
-  .navbar-container .more-icon-container {
-    display: flex;
-    justify-content: flex-end;
-   margin-right: 1rem;
+    .navbar-container .navbar-list {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      background-color: white;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s;
+      z-index: 100;
+      margin-right: 0;
+      gap: 2rem;
+      transition: left 0.6s ease; /* Cambia de 0.3s a 0.6s o más para hacerla más lenta */
+
+    }
+
+    .navbar-container .navbar-list.active {
+      left: 0;
+    }
+
+    /* Ajuste del tamaño del ícono de hamburguesa */
+    .more-icon img {
+      width: 35px;
+      height: 35px;
+    }
+
+    /* Estilo para la cruz */
+    .close-menu {
+      position: absolute; /* Posición absoluta dentro del menú */
+      bottom: 20rem; /* Ubicación desde la parte inferior */
+      left: 15px; /* Centro horizontal */
+      transform: translateX(-50%); /* Ajusta el centro correctamente */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%; /* Para centrar en el contenedor */
+    }
+
+    .close-menu img {
+      width: 45px; /* Tamaño ajustable */
+      height: 45px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .close-menu img:hover {
+      transform: rotate(180deg);
+    }
   }
 
-.more-icon {
-  display: none; /*por ahora oculto...solo durante la prueba*/
- }
-
- .navbar-list {
-  display: none !important;
- }
-
-}
 
 </style>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navbarList = document.querySelector('.navbar-list');
+    const closeIcon = document.getElementById('close-icon');
 
+    // Abrir menú
+    hamburger.addEventListener('click', () => {
+      navbarList.classList.toggle('active');
+    });
 
-
-<!-- revisar porque el icono de hamburuesa se muestra en todas las pages, eso arruina el form -->>
+    // Cerrar menú
+    closeIcon.addEventListener('click', (e) => {
+      e.preventDefault();
+      navbarList.classList.remove('active');
+    });
+  });
+</script>

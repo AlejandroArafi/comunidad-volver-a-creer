@@ -106,7 +106,18 @@
 
    
 
+
+      /*movile*/
+
+
+
       @media screen and (max-width: 768px) {  
+
+.hero-container {
+    margin-top: 4rem;
+    top: 0;
+}
+
         .logo {
             width: 150px;
             height: 150px;
@@ -119,61 +130,52 @@
         }
 
         .subtitle-hero {
-            font-size: 2.1rem;
+            font-size: 2rem;
         }
         
         .subtitle-hero-3 {
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-family: 'Montserrat', sans-serif;
             margin-top: 0.4rem;
-            display: flex;  
-            align-items: center;
+           
             letter-spacing: 4px;
         }
 
         .top-line {
-          display: none;
-        
+         width: 60%;
       }
-    
+
+      .button-hero {
+        display: none;
+      }
   }
-
   @media screen and (max-width: 480px) {
-
     .logo {
-        width: 140px;
-        height: 140px;
+        width: 130px; /* Ajusta el tamaño de la imagen */
+        height: 130px; 
         margin-bottom: 1rem;
     }
 
     .title-hero {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Ajusta el tamaño para que sea más legible */
     }
 
     .subtitle-hero {
-        font-size: 1.8rem;
+        font-size: 1.6rem; /* Ajusta para mayor legibilidad */
     }
 
     .subtitle-hero-3 {
-        font-size: 0.8rem;
-        font-family: 'Montserrat', sans-serif;
+        font-size: 0.8rem; /* Menor tamaño para pantallas muy pequeñas */
         margin-top: 0.4rem;
-        display: flex;  
-        align-items: center;
-        letter-spacing: 3px;
+        letter-spacing: 3px; /* Reduce más el espaciado */
     }
 
     .top-line {
-      display: none;
+        width: 30%; /* Asegura que la línea se vea proporcional */
     }
-    
+
     .button-hero {
         font-size: 0.8rem;
-        margin-top: 30px;
-
+        padding: 8px 14px; /* Ajusta el padding para no sobrecargar el botón */
     }
-
-  
-  }
-    
-</style>
+}

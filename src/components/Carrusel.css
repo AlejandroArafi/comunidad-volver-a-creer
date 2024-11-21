@@ -6,6 +6,7 @@
     /* Añade un padding de 20px a la izquierda y derecha */
     box-sizing: border-box;
     /* Asegura que el padding no afecte el tamaño total del contenedor */
+    border-radius: 20px;
 }
 
 .carrusel {
@@ -13,6 +14,7 @@
     /* Asegura que el carrusel ocupe el 100% de su contenedor */
     margin: 0 auto;
     /* Centra el carrusel horizontalmente */
+
 }
 
 .carrusel .swiper-slide {
@@ -23,9 +25,26 @@
 
 .carrusel img {
     width: 100%;
-    /* Asegura que las imágenes ocupen el 100% del ancho */
     height: 100%;
-    /* Asegura que las imágenes ocupen el 100% de la altura */
     object-fit: cover;
     /* Hace que las imágenes cubran el área sin distorsionarse */
+}
+
+@media screen and (max-width: 768px) {
+    .carrusel-container {
+        width: 95%;
+        position: relative;
+        top: 2rem;
+        border-radius: 10px;
+    }
+
+    .carrusel {
+        width: 100%;
+    }
+
+    .carrusel img {
+        width: 100%;
+        height: 100%;
+    }
+
 }
