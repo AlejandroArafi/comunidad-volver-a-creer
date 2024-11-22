@@ -116,14 +116,16 @@
 
     /* Estilo para la cruz */
     .close-menu {
-  position: absolute; 
-  top: 20px; /* Más cerca de la parte superior */
-  right: 20px; /* Ubicación desde el lado derecho */
+  position: absolute;
+  bottom: 2rem; /* Ajusta la distancia desde la parte inferior */
+  left: 50%; /* Centrado horizontal */
+  transform: translateX(-50%); /* Asegura que esté perfectamente centrado */
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100%; /* Mantén el ancho del contenedor para centrar */
 }
+
 
 
     .close-menu img {
