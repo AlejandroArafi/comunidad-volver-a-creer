@@ -8,14 +8,14 @@
     <!-- Cruz al pie del menú -->
     <li class="close-menu">
       <a href="#" id="close-icon">
-        <img src="/images/close.png" alt="Cerrar menú">
+        <img src="/images/close.png" alt="Cerrar menú" />
       </a>
     </li>
   </ul>
 
   <div class="more-icon-container">
     <a href="#" class="more-icon" id="hamburger">
-      <img src="/images/more.png" alt="hamburger icon">
+      <img src="/images/more.png" alt="hamburger icon" />
     </a>
   </div>
 </section>
@@ -35,7 +35,7 @@
   .navbar-container .navbar-list li {
     list-style: none;
     font-size: 1.2rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
   }
 
   .navbar-list li a {
@@ -45,13 +45,13 @@
   }
 
   .navbar-list li a::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: -2px;
     width: 0;
     height: 2px;
-    background-color: #FFB74D;
+    background-color: #ffb74d;
     transition: width 0.3s ease-in-out;
   }
 
@@ -61,20 +61,23 @@
   }
 
   .navbar-list li a {
-    transition: color 0.3s ease, text-decoration 0.3s ease;
+    transition:
+      color 0.3s ease,
+      text-decoration 0.3s ease;
   }
 
   .more-icon-container {
     display: none;
   }
-  
+
   .close-menu {
     display: none;
   }
 
   @font-face {
-    font-family: 'Montserrat';
-    src: url('/public/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-family: "Montserrat";
+    src: url("/public/fonts/Montserrat-VariableFont_wght.ttf")
+      format("truetype");
     font-weight: normal;
     font-style: normal;
   }
@@ -101,7 +104,6 @@
       margin-right: 0;
       gap: 2rem;
       transition: left 0.6s ease; /* Cambia de 0.3s a 0.6s o más para hacerla más lenta */
-
     }
 
     .navbar-container .navbar-list.active {
@@ -116,15 +118,14 @@
 
     /* Estilo para la cruz */
     .close-menu {
-  position: absolute; 
-  top: 20px; /* Más cerca de la parte superior */
-  right: 20px; /* Ubicación desde el lado derecho */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
+      position: absolute;
+      top: 20px; /* Más cerca de la parte superior */
+      right: 20px; /* Ubicación desde el lado derecho */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
 
     .close-menu img {
       width: 45px; /* Tamaño ajustable */
@@ -136,24 +137,23 @@
       transform: rotate(180deg);
     }
   }
-
-
 </style>
 
 <script>
- document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.querySelector('#hamburger');  // Cambié aquí a #hamburger
-  const navbarList = document.querySelector('.navbar-list');
-  const closeIcon = document.querySelector('#close-icon');  // Cambié aquí a #close-icon
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector("#hamburger"); // Cambié aquí a #hamburger
+    const navbarList = document.querySelector(".navbar-list");
+    const closeIcon = document.querySelector("#close-icon"); // Cambié aquí a #close-icon
 
-  if (hamburger && navbarList && closeIcon) {
-    hamburger.addEventListener('click', () => {
-      navbarList.classList.toggle('active'); // Abre o cierra el menú
-    });
+    if (hamburger && navbarList && closeIcon) {
+      hamburger.addEventListener("click", () => {
+        navbarList.classList.toggle("active"); // Abre o cierra el menú
+      });
 
-    closeIcon.addEventListener('click', (e) => {
-      e.preventDefault();
-      navbarList.classList.remove('active'); // Cierra el menú
-    });
-  }
-});
+      closeIcon.addEventListener("click", (e) => {
+        e.preventDefault();
+        navbarList.classList.remove("active"); // Cierra el menú
+      });
+    }
+  });
+</script>

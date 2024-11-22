@@ -3,179 +3,152 @@
 ---
 
 <section class="hero-container">
+  <img src="/images/Logo.png" alt="logo" class="logo" />
+  <h1 class="title-hero">Centro de rehabilitación integral de adicciones</h1>
+  <hr class="top-line" />
 
-   <img src="/images/Logo.png" alt="logo" class="logo">
-    <h1 class="title-hero">Centro de rehabilitación de adicciones</h1>
-    <hr class="top-line">
-    
-    <h2 class="subtitle-hero">Comunidad Volver a Creer</h2>
-    <h3 class="subtitle-hero-3">Salvando vidas, uniendo familias  </h3>
-   <!--   <h3 class="subtitle-hero-2">Da un primer paso <img src="/public/images/red-heart.png" alt=""></h3>-->
-    <a  href="/form" type="button" class="button-hero" >Contactanos</a>
+  <h2 class="subtitle-hero">Comunidad Volver a Creer</h2>
+  <h3 class="subtitle-hero-3">Salvando vidas, uniendo familias</h3>
+  <!--   <h3 class="subtitle-hero-2">Da un primer paso <img src="/public/images/red-heart.png" alt=""></h3>-->
+  <a href="/form" type="button" class="button-hero">Contactanos</a>
 </section>
 
-
 <style>
-
-/*mueve el hero hacia arr*/
-  .hero-container {
-    position: relative;
-    top: -6rem;
+  @font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
   }
 
+  .hero-container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+  }
   .logo {
     width: 200px;
     height: 200px;
     margin-bottom: 1rem;
   }
 
-    .hero-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10rem;   
-    }
+  .title-hero {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+  }
 
-    .title-hero {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.6rem;
-        
-    }
+  .subtitle-hero {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3.2rem;
+  }
 
-    .subtitle-hero {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 3.2rem;
+  .subtitle-hero-3 {
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 8.5px;
+  }
 
-    }
-
-    .subtitle-hero-2, {
-        font-size: 1.2rem;
-        font-family: 'Montserrat', sans-serif;
-        margin-top: 1.5rem;
-        display: flex;
-       align-items: end;
-        font-style: italic;
-    }
-
-    .subtitle-hero-3 img {
-        margin-left: 1rem;
-        width: 40px;
-        height: 40px;  
-        display: inline-block;
-    }
-    .subtitle-hero-3 {
-        font-size: 1.2rem;
-        font-family: 'Montserrat', sans-serif;
-        letter-spacing: 8.5px;
-    }
+  .top-line {
+    border-top: 2px solid #f48fb18a;
+    width: 600px;
+    margin-bottom: 0.5rem;
+  }
+  .subtitle-hero-3 img {
+    margin-left: 1rem;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+  }
 
   .button-hero {
     background-color: #f48fb1dc;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 18px;
     text-align: center;
-    display: inline-block; 
+    display: inline-block;
     font-size: 16px;
     margin: 15px 20px;
     cursor: pointer;
     border-radius: 18px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     transition: 0.3s ease;
-   /* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);*/
+    /* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);*/
   }
 
   .button-hero:hover {
     background-color: #f48fb1;
   }
-     .top-line {
-        border-top: 2px solid #f48fb18a;
-        width: 50%;
-        margin-bottom: 0.5rem;
-        
-      }
 
+  /*movile*/
 
+  @media screen and (max-width: 768px) {
+    .hero-container {
+      margin-top: 4rem;
+      top: 0;
+    }
 
-    @font-face {
-        font-family: 'Roboto';
-        src: url('/fonts/Roboto-Regular.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-      }
-
-   
-
-
-      /*movile*/
-
-
-
-      @media screen and (max-width: 768px) {  
-
-.hero-container {
-    margin-top: 4rem;
-    top: 0;
-}
-
-        .logo {
-            width: 150px;
-            height: 150px;
-            margin-bottom: 0.8rem;
-        }
-        
-      
-        .title-hero {
-            font-size: 1.3rem;
-        }
-
-        .subtitle-hero {
-            font-size: 2rem;
-        }
-        
-        .subtitle-hero-3 {
-            font-size: 1rem;
-            font-family: 'Montserrat', sans-serif;
-            margin-top: 0.4rem;
-           
-            letter-spacing: 4px;
-        }
-
-        .top-line {
-         width: 60%;
-      }
-
-      .button-hero {
-        display: none;
-      }
-  }
-  @media screen and (max-width: 480px) {
     .logo {
-        width: 130px; /* Ajusta el tamaño de la imagen */
-        height: 130px; 
-        margin-bottom: 1rem;
+      width: 150px;
+      height: 150px;
+      margin-bottom: 0.8rem;
     }
 
     .title-hero {
-        font-size: 1.2rem; /* Ajusta el tamaño para que sea más legible */
+      font-size: 1.3rem;
     }
 
     .subtitle-hero {
-        font-size: 1.6rem; /* Ajusta para mayor legibilidad */
+      font-size: 2rem;
     }
 
     .subtitle-hero-3 {
-        font-size: 0.8rem; /* Menor tamaño para pantallas muy pequeñas */
-        margin-top: 0.4rem;
-        letter-spacing: 3px; /* Reduce más el espaciado */
+      font-size: 1rem;
+      font-family: "Montserrat", sans-serif;
+      margin-top: 0.4rem;
+
+      letter-spacing: 4px;
     }
 
     .top-line {
-        width: 30%; /* Asegura que la línea se vea proporcional */
+      width: 450px;
     }
 
     .button-hero {
-        font-size: 0.8rem;
-        padding: 8px 14px; /* Ajusta el padding para no sobrecargar el botón */
+      display: none;
     }
-}
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      width: 130px; /* Ajusta el tamaño de la imagen */
+      height: 130px;
+      margin-bottom: 1rem;
+    }
+
+    .title-hero {
+      font-size: 1.1rem; /* Ajusta el tamaño para que sea más legible */
+    }
+
+    .subtitle-hero {
+      font-size: 1.8rem; /* Ajusta para mayor legibilidad */
+    }
+
+    .subtitle-hero-3 {
+      font-size: 0.8rem; /* Menor tamaño para pantallas muy pequeñas */
+      margin-top: 0.4rem;
+      letter-spacing: 3.9px; /* Reduce más el espaciado */
+    }
+
+    .top-line {
+      width: 350px; /* Asegura que la línea se vea proporcional */
+    }
+
+    .button-hero {
+      font-size: 0.8rem;
+      padding: 8px 14px; /* Ajusta el padding para no sobrecargar el botón */
+    }
+  }
+</style>

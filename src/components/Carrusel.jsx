@@ -5,15 +5,15 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "./carrusel.css";
 
-const images = ["/images/c1.jpg", "/images/c2.jpg", "/images/c3.jpg"];
+const images = ["/images/c1.jpg", "/images/c2.jpg", "/images/c3.jpg", "/images/c4.jpg", "/images/c5.jpg", "/images/c6.jpg"];
 
 const Carrusel = () => {
   return (
     <Swiper
       className="carrusel-container"
       modules={[Autoplay]}
-      spaceBetween={50}
-      slidesPerView={1}
+      spaceBetween={10}
+      slidesPerView={3}
       autoplay={{
         delay: 3000,
         disableOnInteraction: false,
