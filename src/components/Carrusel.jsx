@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
+import "./carrusel.css";
 
 const images = ["/images/c1.jpg", "/images/c2.jpg", "/images/c3.jpg"];
 
