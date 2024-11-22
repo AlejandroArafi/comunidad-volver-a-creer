@@ -3,6 +3,8 @@
     width: 85%;
     box-sizing: border-box;
     margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
 }
 
 .carrusel {

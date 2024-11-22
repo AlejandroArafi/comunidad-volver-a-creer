@@ -1,0 +1,94 @@
+---
+
+---
+<section class="equipo-clinico-container">
+  <div class="equipo-clinico-text">
+    <h2 class="equipo-clinico-title">Equipo Clínico</h2>
+    <p>
+      Nuestro equipo clínico está compuesto por profesionales altamente capacitados y comprometidos con la rehabilitación integral de nuestros pacientes. 
+      Trabajamos en conjunto para ofrecer un programa de rehabilitación personalizado que abarca todas las áreas necesarias para su desarrollo y bienestar.
+    </p>
+  </div>
+  <div class="equipo-clinico-image">
+    <img src="./images/quienes-somos.jpeg" alt="Equipo Clínico" />
+  </div>
+</section>
+
+<style>
+    .equipo-clinico-container {
+  display: flex;
+  flex-direction: row-reverse; /* Imagen a la izquierda, texto a la derecha */
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
+.equipo-clinico-text,
+.equipo-clinico-image {
+  width: 48%; /* Ambos divs ocupan el 48% del ancho */
+}
+
+.equipo-clinico-text {
+  width: 45%;
+  margin-top: -8rem;
+}
+
+.equipo-clinico-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.equipo-clinico-container p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.equipo-clinico-image img {
+  width: 100%; /* La imagen ocupa el 100% del ancho disponible */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+  .equipo-clinico-container {
+    width: 90%;
+    flex-direction: column; /* Los elementos se apilan verticalmente */
+    text-align: left; /* Alineación del texto a la izquierda */
+  }
+
+  .equipo-clinico-text,
+  .equipo-clinico-image {
+    width: 100%; /* Ambos ocupan el 100% del ancho */
+    margin-bottom: 1rem; /* Espacio entre el texto y la imagen */
+  }
+
+  .equipo-clinico-title {
+    font-size: 1.2rem; /* Tamaño de título más pequeño en pantallas pequeñas */
+  }
+
+  .equipo-clinico-container p {
+    font-size: 0.9rem; /* Reduce el tamaño del texto */
+  }
+
+  .equipo-clinico-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+</style>
