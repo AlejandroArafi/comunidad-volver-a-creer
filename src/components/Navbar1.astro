@@ -141,20 +141,19 @@
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger');
-const navbarList = document.querySelector('.navbar-list');
-const closeIcon = document.querySelector('.close-icon');
+ document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('#hamburger');  // Cambié aquí a #hamburger
+  const navbarList = document.querySelector('.navbar-list');
+  const closeIcon = document.querySelector('#close-icon');  // Cambié aquí a #close-icon
 
-if (hamburger && navbarList && closeIcon) {
-  hamburger.addEventListener('click', () => {
-    navbarList.classList.toggle('active');
-  });
+  if (hamburger && navbarList && closeIcon) {
+    hamburger.addEventListener('click', () => {
+      navbarList.classList.toggle('active'); // Abre o cierra el menú
+    });
 
-  closeIcon.addEventListener('click', (e) => {
-    e.preventDefault();
-    navbarList.classList.remove('active');
-  });
-}
-  });
-</script>
+    closeIcon.addEventListener('click', (e) => {
+      e.preventDefault();
+      navbarList.classList.remove('active'); // Cierra el menú
+    });
+  }
+});
