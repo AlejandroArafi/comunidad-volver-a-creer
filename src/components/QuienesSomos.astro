@@ -4,7 +4,7 @@
 
 <section class="quienes-somos-container">
   <div class="quienes-somos-text">
-    <h2 class="quienes-somos-title">QUIENES SOMOS</h2>
+    <h2 class="quienes-somos-title">Quienes somos</h2>
     <p>
       Nuestro Centro de Rehabilitación Volver a Creer Chile Es un apoyo
       fundamental en la prevención, formación y reinserción de nuestros
@@ -23,12 +23,11 @@
   .quienes-somos-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: center; /*sobra?*/
     margin-top: 0.5rem;
     margin-bottom: 2rem;
     padding: 1rem;
     align-items: flex-start;
-    /*background-color: #f3e5f5;*/
     color: #000000;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
@@ -69,4 +68,32 @@
     height: auto; /* Mantiene la proporción de la imagen */
 
   }
+
+  /* Responsividad */
+  @media screen and (max-width: 768px) {
+    .quienes-somos-container {
+      width: 90%;
+      flex-direction: column; /* Los elementos se apilan verticalmente */
+      text-align: left; /* Alineación del texto a la izquierda */
+    }
+
+    .quienes-somos-text,
+    .quienes-somos-image {
+      width: 100%; /* Ambos ocupan el 100% del ancho */
+      margin-bottom: 1rem; /* Espacio entre el texto y la imagen */     
+    }
+
+    .quienes-somos-title {
+      font-size: 1.2rem; /* Tamaño de título más pequeño en pantallas pequeñas */
+    }
+
+    .quienes-somos-container p {
+      font-size: 0.9rem; /* Tamaño de texto más pequeño en pantallas pequeñas */
+    }
+    .quienes-somos-image img {
+      width: 100%; /* La imagen ocupa el 100% del ancho disponible */
+      height: auto; /* Mantiene la proporción de la imagen */
+    }
+  }
+
 </style>
