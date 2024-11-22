@@ -11,7 +11,7 @@
   <h3 class="subtitle-hero-3">Salvando vidas, uniendo familias <img src="/public/images/red-heart.png" alt=""></h3>
   <hr class="bottom-line">
   <!--   <h3 class="subtitle-hero-2">Da un primer paso <img src="/public/images/red-heart.png" alt=""></h3>-->
-  <!-- <a href="/form" type="button" class="button-hero">Contactanos</a> -->
+  <a href="/form" type="button" class="button-hero">Contactanos</a>
 </section>
 
 <style> 
@@ -84,6 +84,7 @@
     font-family: "Montserrat", sans-serif;
     transition: 0.3s ease;
     /* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);*/
+    display: none;
   }
 
   .button-hero:hover {
@@ -92,73 +93,107 @@
 
   /*movile*/
 
+
   @media screen and (max-width: 768px) {
     .hero-container {
-      margin-top: 4rem;
-      top: 0;
+      margin-top: 3rem;
+      padding: 0 2rem;
     }
 
     .logo {
       width: 150px;
       height: 150px;
-      margin-bottom: 0.8rem;
-    }
-
-    .title-hero {
-      font-size: 1.3rem;
-    }
-
-    .subtitle-hero {
-      font-size: 2rem;
-    }
-
-    .subtitle-hero-3 {
-      font-size: 1rem;
-      font-family: "Montserrat", sans-serif;
-      margin-top: 0.4rem;
-
-      letter-spacing: 4px;
-    }
-
-    .top-line {
-      width:500px;
-    }
-    .bottom-line{
-      width: 600px;
-    }
-
-    .button-hero {
-      display: none;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .logo {
-      width: 130px; /* Ajusta el tamaño de la imagen */
-      height: 130px;
       margin-bottom: 1rem;
     }
 
     .title-hero {
-      font-size: 1.1rem; /* Ajusta el tamaño para que sea más legible */
+      font-size: 1.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
     }
 
     .subtitle-hero {
-      font-size: 1.8rem; /* Ajusta para mayor legibilidad */
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
     }
 
     .subtitle-hero-3 {
-      font-size: 0.8rem; /* Menor tamaño para pantallas muy pequeñas */
-      margin-top: 0.4rem;
-      letter-spacing: 3.9px; /* Reduce más el espaciado */
+      font-size: 1.1rem;
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      margin-top: 0.5rem;
+      letter-spacing: 4px;
     }
 
-    .top-line {
-      width: 350px; /* Asegura que la línea se vea proporcional */
+    .top-line, .bottom-line {
+      width: 90%;
+      max-width: 500px;
+      margin: 0.8rem auto; /* Ajusta el margen superior e inferior */
     }
 
     .button-hero {
-      font-size: 0.8rem;
-      padding: 8px 14px; /* Ajusta el padding para no sobrecargar el botón */
+    font-size: 1rem;
+    padding: 8px 16px; /* Ajusta el padding para no sobrecargar el botón */
+    margin: 1.4rem auto; /* Ajusta el margen superior e inferior */
+    display: block;  /* Hace que el botón se centre horizontalmente */
+    }
+
+    .subtitle-hero-3 img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+
+  /*movile*/
+  @media screen and (max-width: 480px) {
+.hero-container {
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+    .logo {
+      width: 100px; /* Ajusta el tamaño de la imagen */
+      height: 100px;
+      margin-bottom: 0.8rem;
+    }
+
+    .title-hero {
+      font-size: 1rem; /* Ajusta el tamaño para que sea más legible */
+      text-align: center; /* Alinea el texto al centro */
+      margin-bottom: 0.5rem;
+      
+    }
+
+    .subtitle-hero {
+      font-size: 1.5rem; /* Ajusta para mayor legibilidad */
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle-hero-3 {
+      font-size: 0.9rem; /* Menor tamaño para pantallas muy pequeñas */
+      text-align: center;
+      margin-top: 0.4rem;
+      letter-spacing: 3px; /* Reduce más el espaciado */
+    }
+
+    .top-line, .bottom-line {
+      width: 80%; /* Asegura que la línea se vea proporcional */
+      max-width: 300px; /* Limita el ancho máximo */
+     margin: 0.5rem auto;
+    }
+
+    .button-hero {
+      font-size: 0.9rem;
+      padding: 6px 12px; /* Ajusta el padding para no sobrecargar el botón */
+     margin: 1rem auto;  
+     display: block;  /* Hace que el botón se centre horizontalmente */
+    }
+    .subtitle-hero-3 img {
+      width: 20px;
+      height: 20px;
     }
   }
 </style>
