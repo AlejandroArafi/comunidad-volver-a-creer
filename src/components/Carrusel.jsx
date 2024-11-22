@@ -1,10 +1,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
-
-import "../components/carrusel.css";
 
 const images = ["/images/c1.jpg", "/images/c2.jpg", "/images/c3.jpg"];
 
@@ -12,7 +10,7 @@ const Carrusel = () => {
   return (
     <Swiper
       className="carrusel-container"
-      modules={[Autoplay, Navigation, Pagination]}
+      modules={[Autoplay]}
       spaceBetween={50}
       slidesPerView={1}
       autoplay={{
