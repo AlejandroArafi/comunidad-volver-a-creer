@@ -3,194 +3,261 @@
 ---
 
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
 </head>
 
 <div class="form-title-container">
-   <!-- <hr class="top-line"> -->
-<h2 class="form-title">Evaluacion y Orientacion Gratis!</h2>
-<h3 class="form-subtitle">Dejanos tus datos y te contactaremos</h3>
+  <!-- <hr class="top-line"> -->
+  <h2 class="form-title">Evaluacion y Orientacion Gratis!</h2>
+  <h3 class="form-subtitle">Dejanos tus datos y te contactaremos</h3>
 </div>
 
 <!-- form -->
 <section class="form-container">
-<form action="form" method="post">
-
+  <form action="form" method="post">
     <!-- name -->
     <div class="input-container">
-        <i class="fas fa-user"></i>
-        <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+      <i class="fas fa-user"></i>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Ingresa tu nombre"
+        required
+      />
     </div>
-    
-     <!-- email -->
+
+    <!-- email -->
     <div class="input-container">
-        <i class="fas fa-envelope"></i>
-        <input type="email" id="email" name="email" placeholder="Ingresa tu email">
+      <i class="fas fa-envelope"></i>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Ingresa tu email"
+      />
     </div>
 
     <!-- Telefono -->
-     <div class="input-container">
-        <i class="fas fa-phone-alt"></i>
-        <input type="tel" name="Telefono" id=""  placeholder="Ingresa tu telefono" >
+    <div class="input-container">
+      <i class="fas fa-phone-alt"></i>
+      <input
+        type="tel"
+        name="Telefono"
+        id=""
+        placeholder="Ingresa tu telefono"
+      />
     </div>
     <!-- message -->
     <div class="textarea-container">
-        <i class="fas fa-edit"></i>
-        <textarea  id="message" name="message" placeholder="Como podemos ayudarte?"></textarea>
+      <i class="fas fa-edit"></i>
+      <textarea id="message" name="message" placeholder="Como podemos ayudarte?"
+      ></textarea>
     </div>
     <!-- button -->
     <button type="submit" class="form-button">Enviar</button>
-    </form>
-    
-    </section>
+  </form>
 </section>
 
 <section class="whatsapp-container">
-    <hr class="bottom-line">
-    <h3>Puedes contactarnos por whatsapp</h3>
-    <a href="https://wa.me/56932496264?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20informaci%C3%B3n" 
-    class="button-whatsapp" target="_blank"><img src="/images/whatsapp.png" alt=""></a>
-   
+  <hr class="bottom-line" />
+  <h3 class="form-subtitle">Puedes contactarnos por whatsapp</h3>
+  <a
+    href="https://wa.me/56932496264?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20informaci%C3%B3n"
+    class="button-whatsapp"
+    target="_blank"><img src="/images/whatsapp.png" alt="" /></a
+  >
 </section>
 
 <style>
+  .form-title-container {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 
-    .form-title-container {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
+  .form-title,
+  .form-subtitle {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+  }
+  .form-container {
+    display: flex;
+    justify-content: center;
+  }
 
-    .form-title, .form-subtitle {
-        margin: 0;
-        font-family: 'Montserrat', sans-serif;
-    }
-    .form-container {
-        display: flex;
-        justify-content: center;
-    }
+  .input-container i {
+    margin-right: 3px;
+  }
 
-  
-    .input-container i{
-      margin-right: 3px;
-    }
+  .textarea-container {
+    display: flex;
+    align-items: first baseline;
+  }
+  .textarea-container i {
+    margin-right: 3px;
+  }
 
-    .textarea-container {
-        display: flex;
-        align-items: first baseline ;
-    }
-    .textarea-container i{
-        margin-right: 3px;
-    }
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 18px;
+    width: 400px;
+    height: auto;
 
-    .form-container form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid #000000;
-        border-radius: 18px;
-        width: 400px;
-        height: auto;
+    padding: 2.5rem 1.5rem;
+    background-color: rgb(255, 255, 255);
+  }
 
-        padding: 2.5rem 1.5rem;
-        background-color: rgb(255, 255, 255);
-    }
+  .form-container input,
+  textarea {
+    width: 300px;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 2px solid #ffffff;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 15px;
+    background: rgb(247, 247, 247);
+  }
 
-    .form-container input, textarea {
-        width: 300px;
-        margin-bottom: 1rem;
-        padding: 0.5rem;  
-        border: 2px solid #ffffff;
-        font-family: 'Montserrat', sans-serif;
-        border-radius: 15px;
-        background: rgb(247, 247, 247);
-    }
-
-    input::placeholder {
-      
+  input::placeholder {
     font-size: 16px; /* Tamaño de fuente */
-    font-family: 'Montserrat', sans-serif; /* Familia de fuente */
+    font-family: "Montserrat", sans-serif; /* Familia de fuente */
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border: 2px solid #08e7ef2b !important;
+    border-radius: 15px;
+  }
+
+  .form-button {
+    background-color: #b2e0c4;
+    width: 90%;
+
+    border-radius: 15px;
+
+    padding: 0.75rem;
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+  }
+
+  .form-button:hover {
+    background-color: #a0d0b0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .button-whatsapp {
+    cursor: pointer;
+  }
+
+  .whatsapp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    flex-direction: column;
+  }
+
+  .whatsapp-container h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+  }
+
+  .whatsapp-container img {
+    width: 60px;
+    height: 60px;
+    margin-top: 1rem;
+    transition: 0.4s ease;
+  }
+
+  .whatsapp-container img:hover {
+    transform: scale(1.1);
+  }
+
+  .top-line,
+  .bottom-line {
+    width: 25%;
+    border: none;
+    border-top: 2px solid #f48fb16f;
+    margin: 1.5rem auto;
+  }
+
+  .bottom-line {
+    border-top: 2px solid #f48fb1;
+    margin-bottom: 3rem;
+  }
+  
+
+ /* Responsivo */
+  @media (max-width: 768px) {
+    .form-container form {
+      width: 90%;
+      padding: 2rem 1rem; 
     }
 
-    input:focus, textarea:focus {
-        outline: none;
-        border: 2px solid #08e7ef2b !important;
-        border-radius: 15px;
+    .form-container input,
+    .form-container textarea {
+      width: 100%;
+      font-size: 15px;
     }
 
     .form-button {
-        background-color: #B2E0C4;
-       width: 90%;
-    
-       border-radius: 15px;
-    
-       padding: 0.75rem;
-       color: #000000;
-       font-family: 'Montserrat', sans-serif;
-       font-size: 16px;
-       cursor: pointer;
-       transition: all 0.3s ease-in;
+      width: 50%;
+      font-size: 14px;
+      padding: 0.5rem;
     }
 
-    .form-button:hover {
-        background-color: #A0D0B0;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    .input-container i,
+    .textarea-container i {
+      position: absolute;
+      margin-left: 10px;
+      margin-top: 10px;
     }
 
-    .button-whatsapp {
-        cursor: pointer;
+    .input-container input,
+    .textarea-container textarea {
+      padding-left: 35px;
     }
 
-        .whatsapp-container {
-            display: flex;  
-            justify-content: center;
-            align-items: center;
-            margin-top: 3rem;
-            flex-direction: column;
-        }
-
-        .whatsapp-container h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.2rem;
-        }
-      
-        .whatsapp-container img {
-            width: 60px;
-            height: 60px;
-            margin-top: 1rem;
-            transition:   0.4s ease;
-        }
-
-        .whatsapp-container img:hover {
-            transform: scale(1.1);
-        }
-
-        .top-line, .bottom-line {
-        width: 25%;
-        border: none;
-        border-top: 2px solid #f48fb16f;
-        margin: 1.5rem auto;
+    .whatsapp-container img {
+      width: 50px;
+      height: 50px;
     }
 
-    .bottom-line {
-        border-top: 2px solid #f48fb1;
-        margin-bottom: 3rem;
+    .form-title-container {
     }
 
-
-    @media screen and (max-width: 768px) {
-
-        .form-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 5rem;
-            width: 100%;
-            margin-left: 1rem;
-            margin-right: 1rem;
-        }
-
-
-       
+    .form-title {
+      font-size: 1.5rem;
     }
+
+    .form-subtitle {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .form-title {
+      font-size: 1.2rem;
+    }
+
+    .form-subtitle {
+      font-size: 0.9rem;
+    }
+
+    .form-button {
+      font-size: 13px;
+      padding: 0.4rem;
+    }
+  }
 </style>
-
