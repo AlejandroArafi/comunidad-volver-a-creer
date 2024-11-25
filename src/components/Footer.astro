@@ -1,0 +1,129 @@
+---
+
+---
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Comunidad Volver a Creer</h3>
+            <p>Estamos ubicados en Talagante, Región Metropolitana</p>
+            <p>Teléfono: +56 2 2345 6789</p>
+            <p>Horario de atención: Lunes a viernes de 9:00 a.m. a 5:00 p.m.</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Informate sobre nuestro centro</h3>
+             <p>Déjanos tu correo y te enviaremos toda la información necesaria para que des el primer paso hacia la recuperación.</p>
+            <form class="newsletter-form" action="alejandro.arafi@gmail.com" method="post">
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <p>Copyright &copy; 2023 Comunidad Volver a Creer</p>
+</footer>
+
+
+<style>
+    .footer {
+        background-color: #B2E0C4;
+        padding: 1rem;
+        text-align: center;
+        color: #000000;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.8rem;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    .footer-column {
+        flex: 1;
+        margin: 0 1rem;
+        min-width: 200px;
+        
+    }
+
+    .footer-column p {
+        text-align: left;
+    }
+
+    .footer-column h3 {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .footer-column ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-column a {
+        color: #000000;
+        text-decoration: none;
+    }
+/* Newsletter Form */
+    .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    .newsletter-form input {
+        width: 60%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .newsletter-form button {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: "Montserrat", sans-serif;
+        transition: background-color 0.3s ease;
+    }
+
+    .newsletter-form button:hover {
+        background-color: #333333;
+    }
+
+    /* Responsividad */
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-column {
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-form {
+            align-items: center; /* Centra los elementos */
+            width: 100%;
+        }
+
+        .newsletter-form input {
+            width: 80%; /* Ajusta el ancho para pantallas pequeñas */
+        }
+
+        .newsletter-form button {
+            width: 80%; /* Alinea con el input */
+        }
+    }
+</style>
