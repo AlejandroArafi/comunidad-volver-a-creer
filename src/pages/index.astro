@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
-
 import Navbar1 from '../components/Navbar1.astro';
 import Hero from '../components/Hero.astro';
 import Carrusel from '../components/Carrusel.jsx';
@@ -17,11 +16,7 @@ import Footer from '../components/Footer.astro';
   <body>
    <!-- <Navbar />-->
     <!-- <Navbar1 />-->
-    <Hero/>
-
-    <Carrusel client:load/>
-      <QuienesSomos/>
-      <EquipoClinico/>
+   
   <!--  <Footer /> -->
   
     
@@ -37,7 +32,15 @@ import Footer from '../components/Footer.astro';
 	
   > --> 
     <main>
-      <!-- Aquí irán otros componentes como HeroSection, Features, etc. -->
+       <Hero/>
+
+    <Carrusel client:load/>
+    
+     
     </main>
+    <section>
+        <QuienesSomos/>
+      <EquipoClinico/>
+    </section>
   </body>
 </Layout>
