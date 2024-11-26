@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   if (req.method === "POST") {
     const { name, email, telefono, message } = req.body;
 
@@ -30,4 +30,4 @@ module.exports = async (req, res) => {
   } else {
     return res.status(405).send("Método no permitido");
   }
-};
+}
