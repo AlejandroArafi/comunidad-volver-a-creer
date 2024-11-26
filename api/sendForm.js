@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 
     const mailOptions = {
       from: email, // Usa el email ingresado como el remitente
-      to: "tu-correo@ejemplo.com", // Asegúrate de poner el correo al que deseas enviar el mensaje
+      to: "alejandro.arafi@gmail.com", // Asegúrate de poner el correo al que deseas enviar el mensaje
       subject: "Nuevo mensaje de formulario",
       text: `Nombre: ${name}\nEmail: ${email}\nTeléfono: ${telefono}\nMensaje: ${message}`,
     };
