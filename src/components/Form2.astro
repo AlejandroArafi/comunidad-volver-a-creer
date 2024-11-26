@@ -116,9 +116,8 @@
     align-items: center;
     border: 2px solid #000000;
     border-radius: 18px;
-    width: 400px;
-    height: auto;
-
+    width: 100%;
+    max-width: 400px;
     padding: 2.5rem 1.5rem;
     background-color: rgb(255, 255, 255);
   }
@@ -216,7 +215,7 @@
     .form-container input,
     .form-container textarea {
       width: 100%;
-      font-size: 15px;
+
     }
 
     .form-button {
@@ -250,58 +249,74 @@
       font-size: 1rem;
     }
   }
+  
 
- @media (max-width: 480px) {
-  /* Hacer el formulario más grande */
+  /* Responsivo para pantallas de 480px o menos */
+@media (max-width: 480px) {
   .form-container form {
-    width: 100%; /* Hacer que ocupe todo el ancho */
-    padding: 1.5rem; /* Mantener relleno pero reducirlo para usar mejor el espacio */
-    box-sizing: border-box; /* Asegurarse de que el padding no afecte el ancho */
+    width: 100%; /* Asegura que el formulario ocupe todo el ancho disponible */
+    padding: 1.5rem; /* Relleno adecuado para usar mejor el espacio */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
   }
 
+  .form-container {
+    width: 100%; /* Asegurarse de que el contenedor ocupe todo el ancho */
+    padding: 0; /* Eliminar relleno innecesario */
+    box-sizing: border-box; /* Asegurarse de que el relleno no afecte el ancho */
+  }
+
+  /* Asegurarse de que el formulario no tenga un max-width restringido */
+  .form-container form {
+    max-width: none;
+  }
+
+  /* Inputs y textarea toman el 100% del ancho */
   .form-container input,
   .form-container textarea {
-    width: 100%; /* Los inputs deben tomar el 100% del ancho */
-    font-size: 16px; /* Aumentar el tamaño de la fuente */
-    padding-left: 35px; /* Asegurarse de que el padding no afecte el ancho */
+    width: 100%; /* Asegura que ocupen todo el ancho disponible */
+    font-size: 16px; /* Tamaño adecuado para facilitar la lectura */
+    padding-left: 35px; /* Mantener el padding para los iconos */
   }
 
+  /* Botón de enviar con ancho completo */
   .form-button {
-    width: 100%; /* Hacer el botón de ancho completo */
+    width: 100%; /* Asegura que el botón ocupe el 100% del ancho */
     font-size: 16px; /* Tamaño de fuente adecuado */
-    padding: 0.75rem; /* Hacer el botón más accesible */
+    padding: 0.75rem; /* Mejor accesibilidad con más espacio */
   }
 
+  /* Estilo del título del formulario */
   .form-title {
-    font-size: 1.5rem; /* Tamaño del título más grande */
+    font-size: 1.5rem; /* Aumentar el tamaño del título */
     margin-bottom: 1rem; /* Espacio adecuado debajo del título */
   }
 
+  /* Estilo del subtítulo */
   .form-subtitle {
-    font-size: 1rem; /* Tamaño del subtítulo más grande */
+    font-size: 1rem; /* Tamaño adecuado para el subtítulo */
     margin-bottom: 1.5rem; /* Espacio entre el subtítulo y el formulario */
   }
 
-  /* Ajustar iconos */
+  /* Ajustar los iconos */
   .input-container i,
   .textarea-container i {
-    font-size: 1.2rem; /* Asegurar que los iconos sean visibles */
+    font-size: 1.2rem; /* Asegurarse de que los iconos sean visibles */
   }
 
-  /* Ajustar tamaño del icono de WhatsApp */
+  /* Ajustar el tamaño de la imagen de WhatsApp */
   .whatsapp-container img {
-    width: 55px; /* Ajustar tamaño para que se vea bien */
+    width: 55px;
     height: 55px;
   }
 
-  /* Reducción de márgenes y líneas horizontales */
+  /* Ajustar márgenes y líneas horizontales */
   .top-line,
   .bottom-line {
-    width: 20%;
+    width: 20%; /* Reducir el ancho de las líneas horizontales */
   }
 
   .whatsapp-container h3 {
-    font-size: 1.1rem; /* Tamaño del texto de WhatsApp */
+    font-size: 1.1rem; /* Tamaño adecuado para el texto de WhatsApp */
     margin-top: 0.5rem;
   }
 }
