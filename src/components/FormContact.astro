@@ -11,8 +11,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 </div>
 
 <!-- form -->
-<section class="form-container">
-<form action="/api/sendForm" method="post">
+<div class="form-container">
+<form class="formulario" action="/api/sendForm" method="post">
     <!-- name -->
     <div class="input-container">
       <i class="fas fa-user"></i>
@@ -55,7 +55,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
     <!-- button -->
     <button type="submit" class="form-button">Enviar</button>
   </form>
-</section>
+</div>
 
 
 <section class="whatsapp-container">
@@ -97,11 +97,12 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 .form-container {
   display: flex;
   justify-content: center;
-  padding: 0 10px; /* Asegurarse de que haya espacio en los lados para pantallas pequeñas */
-  width: 100%; /* Asegurarse de que el contenedor ocupe el 100% del ancho */
+  padding: 0 10px;
+  /*width: 100%; /* Asegurarse de que el contenedor ocupe el 100% del ancho */
+  background-color: red;
 }
 
-.form-container form {
+.formulario {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,10 +110,14 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
   border: 2px solid #000000;
   border-radius: 18px;
   width: 400px; /* En tamaños grandes */
-  max-width: 100%; /* Permitir que se ensanche en pantallas pequeñas */
+  /*max-width: 100%; Permitir que se ensanche en pantallas pequeñas */
   height: auto;
   padding: 2.5rem 1.5rem;
   background-color: rgb(255, 255, 255);
+}
+
+.form-container  {
+ 
 }
 
 .input-container i {
@@ -209,98 +214,35 @@ textarea:focus {
   margin-bottom: 3rem;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .form-container form {
-    width: 100%; /* Asegurarse de que ocupe todo el ancho disponible */
-    max-width: 100%; /* Asegurarse de que no tenga un límite */
-    padding: 2rem 1rem;
-  }
 
-  .form-container input,
-  .form-container textarea {
-    width: 100%; /* Los inputs deben tomar el 100% del ancho */
-    font-size: 15px;
-    padding-left: 35px;
-  }
 
-  .form-button {
-    width: 100%; /* Asegurarse de que el botón ocupe el 100% del ancho */
-    font-size: 14px;
-    padding: 0.5rem;
-  }
-
-  .input-container i,
-  .textarea-container i {
-    position: absolute;
-    margin-left: 10px;
-    margin-top: 10px;
-  }
-
-  .whatsapp-container img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .form-title {
-    font-size: 1.5rem;
-  }
-
-  .form-subtitle {
-    font-size: 1rem;
-  }
+/* Estilos para pantallas grandes (por ejemplo, laptops y desktops) */
+@media (min-width: 992px) {
+  
 }
+ 
+/* Estilos para pantallas medianas (por ejemplo, tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .form-container{
+    width: 100%;
 
-@media (max-width: 480px) {
-  .form-container form {
-    width: 100%; /* Asegurarse de que el formulario ocupe todo el ancho */
-    padding: 1.5rem; /* Ajustar el padding */
+  }
+  .formulario {
+    width: 800px;
+    height: 500px;
+  }s
+}
+ 
+/* Estilos para pantallas pequeñas (por ejemplo, móviles) */
+@media (max-width: 767px) {
+  .form-container{
+    width: 900px;
   }
 
-  .form-container input,
-  .form-container textarea {
-    width: 100%; /* Asegurarse de que los inputs tomen el 100% */
-    font-size: 16px;
-  }
 
-  .form-button {
-    width: 100%; /* Botón de ancho completo */
-    font-size: 16px;
-    padding: 0.75rem;
-  }
-
-  .form-title {
-    font-size: 1.5rem; /* Tamaño del título más grande */
-    margin-bottom: 1rem; /* Espacio adecuado debajo del título */
-  }
-
-  .form-subtitle {
-    font-size: 1rem; /* Tamaño del subtítulo más grande */
-    margin-bottom: 1.5rem; /* Espacio entre el subtítulo y el formulario */
-  }
-
-  /* Ajustar iconos */
-  .input-container i,
-  .textarea-container i {
-    font-size: 1.2rem; /* Asegurar que los iconos sean visibles */
-  }
-
-  /* Ajustar tamaño del icono de WhatsApp */
-  .whatsapp-container img {
-    width: 55px; /* Ajustar tamaño para que se vea bien */
-    height: 55px;
-  }
-
-  /* Reducción de márgenes y líneas horizontales */
-  .top-line,
-  .bottom-line {
-    width: 20%;
-  }
-
-  .whatsapp-container h3 {
-    font-size: 1.1rem; /* Tamaño del texto de WhatsApp */
-    margin-top: 0.5rem;
-  }
+  
 }
 
 </style>
+
+/*form-container contenedor rojo*/
