@@ -3,9 +3,9 @@
     <!-- Columna de información -->
     <div class="footer-column">
       <h3>Comunidad Volver a Creer</h3>
-      <p><i class="fas fa-map-marker-alt"></i> Estamos ubicados en Talagante, Región Metropolitana</p>
+      <p><i class="fas fa-map-marker-alt"></i> Estamos ubicados en Talagante, Region Metropolitana</p>
       <p><i class="fas fa-phone-alt"></i> Teléfono: +56 2 2345 6789</p>
-      <p><i class="fas fa-clock"></i> Horario de atención: Lunes a viernes de 9:00 a.m. a 5:00 p.m.</p>
+      <p><i class="fas fa-clock"></i> Horario de atencion: Lunes a viernes de 9:00 a.m. a 5:00 p.m.</p>
     </div>
   </div>
 
@@ -14,87 +14,87 @@
     <p>&copy; 2024 Comunidad Volver a Creer. Todos los derechos reservados.</p>
   </div>
 
-  <style>
+  </footer>
+
+   <style>
     /* Estilos generales del footer */
     .footer {
-      background: linear-gradient(135deg, #b2e0c4, #80c1a3);
-      padding: 1rem;
-      color: #000000;
+      background: linear-gradient(135deg, #f3f4f6, #d9e4dd); /* Colores suaves */
+      padding: 2rem 1rem;
+      color: #333333;
       font-family: "Montserrat", sans-serif;
-      font-size: 0.8rem;
     }
 
     .footer-container {
       display: flex;
       flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: center;
+      align-items: center;
+      text-align: center;
       gap: 1.5rem;
-      margin-bottom: 1rem;
     }
 
     .footer-column {
-      flex: 1;
-      margin: 0 auto;
-      text-align: center;
+      max-width: 600px;
     }
 
     .footer-column h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2b7a78;
       margin-bottom: 1rem;
-      font-size: 1.2rem;
     }
 
     .footer-column p {
-      text-align: center;
+      font-size: 1rem;
       margin-bottom: 0.5rem;
+      color: #555555;
     }
 
-    .footer-column a {
-      color: #000000;
-      text-decoration: none;
+    .footer-column p i {
+      color: #2b7a78;
+      margin-right: 0.5rem;
     }
 
     /* Barra inferior */
     .footer-bottom {
-      background-color: #80c1a3;
-      padding: 0.5rem 1rem;
-      font-size: 0.7rem;
+      margin-top: 1.5rem;
+      background-color: #2b7a78;
+      padding: 0.8rem;
       color: #ffffff;
+      font-size: 0.9rem;
       text-align: center;
     }
 
     /* Responsividad */
     @media (max-width: 768px) {
-      .footer-container {
-        gap: 1rem;
+      .footer {
+        padding: 1.5rem 1rem;
+      }
+
+      .footer-column h3 {
+        font-size: 1.3rem;
+      }
+
+      .footer-column p {
+        font-size: 0.95rem;
       }
     }
 
     @media (max-width: 480px) {
       .footer-container {
-        flex-direction: column;
-        align-items: center;
         gap: 1rem;
       }
 
-      .footer-column {
-        flex: 1;
-        margin: 0 auto;
-        min-width: 100%;
-      }
-
       .footer-column h3 {
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
 
       .footer-column p {
         font-size: 0.9rem;
-        text-align: center;
       }
 
       .footer-bottom {
-        font-size: 0.6rem;
-        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
       }
     }
   </style>
