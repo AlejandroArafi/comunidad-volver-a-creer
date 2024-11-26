@@ -3,6 +3,10 @@ interface Props {
 	title: string;
 }
 
+import Footer from '../components/Footer.astro';
+import Navbar1 from '../components/Navbar1.astro';
+import '../styles/global.css';
+
 const { title } = Astro.props;
 ---
 
@@ -16,10 +20,14 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
+	<Navbar1 />
 	<body>
+
+
 		<slot />
 
 	</body>
+	<Footer />
 </html>
 <style is:global>
 	:root {
@@ -35,7 +43,7 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		
 	}
 	code {
 		font-family:

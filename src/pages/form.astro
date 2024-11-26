@@ -1,6 +1,6 @@
 ---
+import Layout from '../layouts/Layout.astro';
 
-import '../styles/global.css';
 
 import Navbar1 from '../components/Navbar1.astro';
 import Footer from '../components/Footer.astro';
@@ -9,9 +9,9 @@ import FormContact from '../components/FormContact.astro';
 
 ---
 
-<Navbar1/>
+<Layout title="formulario de contacto">
 <FormContact/>
-<Footer/>
+</Layout>
 
 
 
