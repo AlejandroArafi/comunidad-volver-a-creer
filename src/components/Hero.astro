@@ -1,5 +1,8 @@
 ---
 
+import WhatsAppFloating from "./WhatsAppFloating.astro";
+
+
 ---
 
 <section class="hero-container">
@@ -11,6 +14,10 @@
   <h3 class="subtitle-hero-3">Salvando vidas, uniendo familias <img src="/images/red-heart.png" alt=""></h3>
   <hr class="bottom-line">
   <!--   <h3 class="subtitle-hero-2">Da un primer paso <img src="/public/images/red-heart.png" alt=""></h3>-->
+
+  <WhatsAppFloating phoneNumber="573143115150" 
+    message="Hola! Necesito más información" position="right"/>
+
   <a href="/form" type="button" class="button-hero">Contactanos</a>
 </section>
 
@@ -146,8 +153,8 @@
 
     .button-hero {
     font-size: 1rem;
-    padding: 8px 16px; /* Ajusta el padding para no sobrecargar el botón */
-    margin: 1.4rem auto; /* Ajusta el margen superior e inferior */
+    padding: 8px 16px; 
+    margin: 1.4rem auto; 
     display: block;  /* Hace que el botón se centre horizontalmente */
     }
 
@@ -166,20 +173,20 @@
 }
 
     .logo {
-      width: 100px; /* Ajusta el tamaño de la imagen */
+      width: 100px; 
       height: 100px;
       margin-bottom: 0.8rem;
     }
 
     .title-hero {
-      font-size: 1rem; /* Ajusta el tamaño para que sea más legible */
-      text-align: center; /* Alinea el texto al centro */
+      font-size: 1rem; 
+      text-align: center; 
       margin-bottom: 0.5rem;
       
     }
 
     .subtitle-hero {
-      font-size: 1.5rem; /* Ajusta para mayor legibilidad */
+      font-size: 1.5rem;
       text-align: center;
       margin-bottom: 0.5rem;
     }
