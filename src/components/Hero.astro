@@ -18,7 +18,7 @@ import WhatsAppFloating from "./WhatsAppFloating.astro";
   <WhatsAppFloating phoneNumber="56940902939" 
     message="Hola! Necesito más información" position="right"/>
 
-  <a href="/form" type="button" class="button-hero">Contactanos</a>
+  <a href="/form" type="button" class="button-hero">Pide ayuda aqui</a>
 </section>
 
 <style> 
@@ -69,14 +69,16 @@ import WhatsAppFloating from "./WhatsAppFloating.astro";
   }
 
   .top-line{
-    border: 1px solid #f48fb1;
+  /*border: 1px solid #f48fb1;*/
+    border: 1px solid #A8D8D8;
     width: 600px;
     margin-bottom: 0.5rem;
    
   }
 
   .bottom-line{
-    border: 1px solid #f48fb1;
+    /*border: 1px solid #f48fb1;*/
+    border: 1px solid #A8D8D8;
     width: 700px;
     margin-top: -0.5rem;
     margin-bottom: 2rem;
@@ -91,7 +93,8 @@ import WhatsAppFloating from "./WhatsAppFloating.astro";
   }
 
   .button-hero {
-    background-color: #f48fb1dc;
+   /* background-color: #f48fb1dc;*/
+   background-color: #A8D8D8;
     color: white;
     padding: 10px 18px;
     text-align: center;
@@ -192,10 +195,10 @@ import WhatsAppFloating from "./WhatsAppFloating.astro";
     }
 
     .subtitle-hero-3 {
-      font-size: 0.9rem; /* Menor tamaño para pantallas muy pequeñas */
+      font-size: 0.8rem; /* Menor tamaño para pantallas muy pequeñas */
       text-align: center;
-      margin-top: 0.4rem;
-      letter-spacing: 3px; /* Reduce más el espaciado */
+      margin-top: 0.3rem;
+      letter-spacing: 2px; /* Reduce más el espaciado */
     }
 
     .top-line, .bottom-line {
@@ -213,6 +216,10 @@ import WhatsAppFloating from "./WhatsAppFloating.astro";
     .subtitle-hero-3 img {
       width: 20px;
       height: 20px;
+    }
+
+    .hero-container a {
+      text-decoration: none;
     }
   }
 </style>
