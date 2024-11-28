@@ -1,8 +1,5 @@
 ---
-
 import WhatsAppFloating from "./WhatsAppFloating.astro";
-
-
 ---
 
 <section class="hero-container">
@@ -11,22 +8,71 @@ import WhatsAppFloating from "./WhatsAppFloating.astro";
   <hr class="top-line" />
 
   <h2 class="subtitle-hero">Comunidad Volver a Creer</h2>
-  <h3 class="subtitle-hero-3">Salvando vidas, uniendo familias <img src="/images/red-heart.png" alt=""></h3>
-  <hr class="bottom-line">
-  <!--   <h3 class="subtitle-hero-2">Da un primer paso <img src="/public/images/red-heart.png" alt=""></h3>-->
+  <h3 class="subtitle-hero-3">
+    Salvando vidas, uniendo familias
+    <img src="/images/red-heart.png" alt="" />
+  </h3>
+  <hr class="bottom-line" />
 
-  <WhatsAppFloating phoneNumber="56940902939" 
-    message="Hola! Necesito más información" position="right"/>
+  <WhatsAppFloating
+    phoneNumber="56940902939"
+    message="Hola! Necesito más información"
+    position="right"
+  />
 
-  <a href="/form" type="button" class="button-hero">Pide ayuda aqui</a>
+  <a href="/form" type="button" class="button-hero">
+    <span><img src="" alt=""></span> Pide ayuda aquí
+  </a>
 </section>
 
-<style> 
+<style>
   @font-face {
     font-family: "Roboto";
     src: url("/fonts/Roboto-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
   }
 
   .hero-container {
@@ -36,67 +82,92 @@ import WhatsAppFloating from "./WhatsAppFloating.astro";
     justify-content: center;
     align-items: center;
     margin-top: 5rem;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.9)
+      ),
+      url('/images/bg-pattern.png');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    border-radius: 8px;
   }
+
   .logo {
     width: 200px;
     height: 200px;
     margin-bottom: 1rem;
+    animation: slideInLeft 1.5s ease-out forwards;
   }
 
   .title-hero {
     font-family: "Montserrat", sans-serif;
     font-size: 1.6rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: slideInRight 1s ease-out forwards;
+    animation-delay: 0.5s;
   }
 
   .subtitle-hero {
     font-family: "Montserrat", sans-serif;
+    font-weight: bold;
     font-size: 3.2rem;
-   margin: 0;
-   padding: ;
+    margin: 0 0 1.5rem;
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out forwards;
+    animation-delay: 1s;
   }
 
   .subtitle-hero-3 {
-    font-size: 1.2rem;
     font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    font-size: 1.2rem;
     letter-spacing: 8.5px;
-    margin: 0;
+    margin: 0 0 0.7rem;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 0.7rem;
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out forwards;
+    animation-delay: 1.2s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   }
 
-  .top-line{
-  /*border: 1px solid #f48fb1;*/
-    border: 1px solid #A8D8D8;
-    width: 600px;
-    margin-bottom: 0.5rem;
-   
-  }
-
-  .bottom-line{
-    /*border: 1px solid #f48fb1;*/
-    border: 1px solid #A8D8D8;
-    width: 700px;
-    margin-top: -0.5rem;
-    margin-bottom: 2rem;
-  
-  }
   .subtitle-hero-3 img {
     margin-left: 1rem;
     width: 40px;
     height: 40px;
     display: inline-block;
-    
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out forwards;
+    animation-delay: 1.4s;
+  }
+
+  .top-line {
+    border: 1px solid #66cdaa;
+    width: 600px;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out forwards;
+    animation-delay: 0.8s;
+  }
+
+  .bottom-line {
+    border: 1px solid #66cdaa;
+    width: 700px;
+    margin-top: -0.5rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out forwards;
+    animation-delay: 1.3s;
   }
 
   .button-hero {
-   /* background-color: #f48fb1dc;*/
-   background-color: #A8D8D8;
+    background-color: #66cdaa;
     color: white;
-    padding: 10px 18px;
+    padding: 12px 24px;
     text-align: center;
     display: inline-block;
     font-size: 16px;
@@ -104,18 +175,20 @@ import WhatsAppFloating from "./WhatsAppFloating.astro";
     cursor: pointer;
     border-radius: 18px;
     font-family: "Montserrat", sans-serif;
-    transition: 0.3s ease;
-    /* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);*/
-    display: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    opacity: 0;
+    animation: fadeInUp 0.7s ease-out forwards;
+    animation-delay: 1.5s;
+    text-decoration: none;
   }
 
   .button-hero:hover {
-    background-color: #f48fb1;
+    background-color: #558b7e;
+    transform: scale(1.05);
+  transform: scale(1.05);
   }
 
-  /*movile*/
-
-
+  /* Estilos responsivos */
   @media screen and (max-width: 768px) {
     .hero-container {
       margin-top: 3rem;
@@ -131,34 +204,27 @@ import WhatsAppFloating from "./WhatsAppFloating.astro";
     .title-hero {
       font-size: 1.4rem;
       text-align: center;
-      margin-bottom: 1rem;
     }
 
     .subtitle-hero {
       font-size: 2.5rem;
       text-align: center;
-      margin-bottom: 1rem;
     }
 
     .subtitle-hero-3 {
       font-size: 1.1rem;
-      text-align: center;
-      font-family: "Montserrat", sans-serif;
-      margin-top: 0.5rem;
       letter-spacing: 4px;
     }
 
-    .top-line, .bottom-line {
+    .top-line,
+    .bottom-line {
       width: 90%;
       max-width: 500px;
-      margin: 0.8rem auto; /* Ajusta el margen superior e inferior */
     }
 
     .button-hero {
-    font-size: 1rem;
-    padding: 8px 16px; 
-    margin: 1.4rem auto; 
-    display: block;  /* Hace que el botón se centre horizontalmente */
+      font-size: 1rem;
+      padding: 10px 20px;
     }
 
     .subtitle-hero-3 img {
@@ -167,59 +233,45 @@ import WhatsAppFloating from "./WhatsAppFloating.astro";
     }
   }
 
-
-  /*movile*/
   @media screen and (max-width: 480px) {
-.hero-container {
-  margin-top: 2rem;
-  padding: 0 1rem;
-}
+    .hero-container {
+      margin-top: 2rem;
+      padding: 0 1rem;
+    }
 
     .logo {
-      width: 100px; 
+      width: 100px;
       height: 100px;
       margin-bottom: 0.8rem;
     }
 
     .title-hero {
-      font-size: 1rem; 
-      text-align: center; 
-      margin-bottom: 0.5rem;
-      
+      font-size: 1rem;
     }
 
     .subtitle-hero {
       font-size: 1.5rem;
-      text-align: center;
-      margin-bottom: 0.5rem;
     }
 
     .subtitle-hero-3 {
-      font-size: 0.8rem; /* Menor tamaño para pantallas muy pequeñas */
-      text-align: center;
-      margin-top: 0.3rem;
-      letter-spacing: 2px; /* Reduce más el espaciado */
+      font-size: 0.8rem;
+      letter-spacing: 2px;
     }
 
-    .top-line, .bottom-line {
-      width: 80%; /* Asegura que la línea se vea proporcional */
-      max-width: 300px; /* Limita el ancho máximo */
-     margin: 0.5rem auto;
+    .top-line,
+    .bottom-line {
+      width: 80%;
+      max-width: 300px;
     }
 
     .button-hero {
       font-size: 0.9rem;
-      padding: 6px 12px; /* Ajusta el padding para no sobrecargar el botón */
-     margin: 1rem auto;  
-     display: block;  /* Hace que el botón se centre horizontalmente */
+      padding: 6px 12px;
     }
+
     .subtitle-hero-3 img {
       width: 20px;
       height: 20px;
-    }
-
-    .hero-container a {
-      text-decoration: none;
     }
   }
 </style>

@@ -3,9 +3,20 @@
     <!-- Columna de información -->
     <div class="footer-column">
       <h3>Comunidad Volver a Creer</h3>
-      <p><i class="fas fa-map-marker-alt"></i> Estamos ubicados en Talagante, Region Metropolitana</p>
-      <p><i class="fas fa-phone-alt"></i> Teléfono: +56 2 2345 6789</p>
-      <p><i class="fas fa-clock"></i> Horario de atencion: Lunes a viernes de 9:00 a.m. a 5:00 p.m.</p>
+      <p>
+        <i class="fas fa-map-marker-alt"></i> 
+        <a href="https://goo.gl/maps/example" target="_blank" rel="noopener noreferrer">
+          Talagante, Región Metropolitana
+        </a>
+      </p>
+      <p>
+        <i class="fas fa-phone-alt"></i> 
+        <a href="tel:+56223456789">+56 2 2345 6789</a>
+      </p>
+      <p>
+        <i class="fas fa-clock"></i> 
+        Lunes a viernes: 9:00 a.m. - 5:00 p.m.
+      </p>
     </div>
   </div>
 
@@ -13,100 +24,115 @@
   <div class="footer-bottom">
     <p>&copy; 2024 Comunidad Volver a Creer. Todos los derechos reservados.</p>
   </div>
+</footer>
 
-  </footer>
+<style>
+  /* Estilos generales del footer */
+  .footer {
+    background: linear-gradient(135deg, #E6F7F1, #FDF7E6); /* Degradado suave */
+    padding: 2rem 1rem;
+    color: #5A5A5A; /* Gris cálido */
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    margin-top: auto;
+    width: 100%;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
 
-   <style>
-    /* Estilos generales del footer */
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .footer-column {
+    max-width: 600px;
+  }
+
+  .footer-column h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2A6359; /* Verde oscuro */
+    margin-bottom: 1rem;
+  }
+
+  .footer-column p {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    color: #5A5A5A;
+  }
+
+  .footer-column p i {
+    color: #38B2A6; /* Verde menta */
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .footer-column p:hover i {
+    transform: scale(1.2); /* Animación al pasar el ratón */
+    color: #2A6359; /* Verde oscuro */
+  }
+
+  .footer-column a {
+    color: #38B2A6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-column a:hover {
+    color: #2A6359; /* Verde oscuro */
+  }
+
+  /* Barra inferior */
+  .footer-bottom {
+    margin-top: 1.5rem;
+    background-color: #2A6359; /* Verde oscuro */
+    padding: 0.8rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-align: center;
+    border-top: 2px solid #38B2A6; /* Línea de acento */
+  }
+
+  /* Responsividad */
+  @media (max-width: 768px) {
     .footer {
-      background: linear-gradient(135deg, #f3f4f6, #d9e4dd); /* Colores suaves */
-      padding: 2rem 1rem;
-      color: #333333;
-      font-family: "Montserrat", sans-serif;
-      position: relative;
-      margin-top: auto;
-      width: 100%
-  
- }
-
-    .footer-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 1.5rem;
-    }
-
-    .footer-column {
-      max-width: 600px;
+      padding: 1.5rem 1rem;
     }
 
     .footer-column h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #2b7a78;
-      margin-bottom: 1rem;
+      font-size: 1.6rem;
     }
 
     .footer-column p {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-      color: #555555;
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-container {
+      gap: 1rem;
     }
 
-    .footer-column p i {
-      color: #2b7a78;
-      margin-right: 0.5rem;
+    .footer-column h3 {
+      font-size: 1.4rem;
     }
 
-    /* Barra inferior */
-    .footer-bottom {
-      margin-top: 1.5rem;
-      background-color: #2b7a78;
-      padding: 0.8rem;
-      color: #ffffff;
+    .footer-column p {
       font-size: 0.9rem;
-      text-align: center;
     }
 
-    /* Responsividad */
-    @media (max-width: 768px) {
-      .footer {
-        padding: 1.5rem 0;
-     padding-bottom: 0;
-      }
-
-      .footer-column h3 {
-        font-size: 1.3rem;
-      }
-
-      .footer-column p {
-        font-size: 0.95rem;
-      }
+    .footer-bottom {
+      font-size: 0.8rem;
     }
+  }
+</style>
 
-    @media (max-width: 480px) {
-      .footer-container {
-        gap: 1rem;
-      }
-
-      .footer-column h3 {
-        font-size: 1.2rem;
-      }
-
-      .footer-column p {
-        font-size: 0.9rem;
-      }
-
-      .footer-bottom {
-        font-size: 0.6rem;
-      }
-    }
-  </style>
-
-  <!-- Agregar FontAwesome -->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
-    defer
-  ></script>
-</footer>
+<!-- Agregar FontAwesome 6 -->
+<script
+  src="https://kit.fontawesome.com/a076d05399.js"
+  crossorigin="anonymous"
+  defer
+></script>

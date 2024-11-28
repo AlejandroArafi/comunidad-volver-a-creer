@@ -1,100 +1,121 @@
----
-
----
 <section class="equipo-clinico-container">
-  <div class="equipo-clinico-text">
+  <div class="equipo-clinico-text animate-on-scroll">
     <h2 class="equipo-clinico-title">Equipo Clínico</h2>
     <p>
       Nuestro equipo clínico está compuesto por profesionales altamente capacitados y comprometidos con la rehabilitación integral de nuestros pacientes. 
       Trabajamos en conjunto para ofrecer un programa de rehabilitación personalizado que abarca todas las áreas necesarias para su desarrollo y bienestar.
     </p>
   </div>
-  <div class="equipo-clinico-image">
+  <div class="equipo-clinico-image animate-on-scroll">
     <img src="./images/quienes-somos.jpeg" alt="Equipo Clínico" />
   </div>
 </section>
 
-
-
-
-
-
 <style>
-    .equipo-clinico-container {
-  display: flex;
-  flex-direction: row-reverse; /* Imagen a la izquierda, texto a la derecha */
-  align-items: center; /*sobra?*/
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  align-items: flex-start;
-  color: #000000;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  text-align: center;
-  width: 85%;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: space-between;
-}
+  .animate-on-scroll {
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(50px); /* Desplazado hacia abajo */
+    transition: all 0.6s ease-out; /* Transición más suave */
+  }
 
-.equipo-clinico-text,
-.equipo-clinico-image {
-  width: 48%; /* Ambos divs ocupan el 48% del ancho */
-}
+  .animate-on-scroll.visible {
+    opacity: 1; /* Se hace visible */
+    transform: translateY(0); /* Vuelve a su posición inicial */
+  }
 
-.equipo-clinico-text {
-  width: 45%;
-
-}
-
-.equipo-clinico-title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  font-weight: bold;
-  text-align: left;
-}
-
-.equipo-clinico-container p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  line-height: 1.5;
-  text-align: left;
-}
-
-.equipo-clinico-image img {
-  width: 100%; /* La imagen ocupa el 100% del ancho disponible */
-  height: auto; /* Mantiene la proporción de la imagen */
-}
-
-/* Responsividad */
-@media screen and (max-width: 768px) {
   .equipo-clinico-container {
-    width: 90%;
-    flex-direction: column; /* Los elementos se apilan verticalmente */
-    text-align: left; /* Alineación del texto a la izquierda */
+    display: flex;
+    flex-direction: row-reverse; /* Imagen a la izquierda, texto a la derecha */
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: #f7f7f7; /* Fondo más cálido y acogedor */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .equipo-clinico-text,
   .equipo-clinico-image {
-    width: 100%; /* Ambos ocupan el 100% del ancho */
-    margin-bottom: 1rem; /* Espacio entre el texto y la imagen */
+    width: 48%;
+  }
+
+  .equipo-clinico-text {
+    width: 45%;
   }
 
   .equipo-clinico-title {
-    font-size: 1.2rem; /* Tamaño de título más pequeño en pantallas pequeñas */
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: left;
+    color: #2c3e50; /* Color oscuro y elegante */
   }
 
   .equipo-clinico-container p {
-    font-size: 0.9rem; /* Reduce el tamaño del texto */
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #34495e; /* Color suave y legible */
+    text-align: left;
+       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   }
 
   .equipo-clinico-image img {
     width: 100%;
     height: auto;
+    border-radius: 10px; /* Bordes redondeados en la imagen */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.150); /* Sombra sutil en la imagen */
   }
-}
 
+  /* Responsividad */
+  @media screen and (max-width: 768px) {
+    .equipo-clinico-container {
+      width: 90%;
+      flex-direction: column; /* Los elementos se apilan verticalmente */
+      text-align: center; /* Centrar el texto */
+    }
+
+    .equipo-clinico-text,
+    .equipo-clinico-image {
+      width: 100%; /* Ambos ocupan el 100% del ancho */
+      margin-bottom: 1rem; /* Espacio entre el texto y la imagen */
+    }
+
+    .equipo-clinico-title {
+      font-size: 1.5rem; /* Tamaño de título más pequeño en pantallas pequeñas */
+    }
+
+    .equipo-clinico-container p {
+      font-size: 1rem; /* Ajuste de tamaño de texto */
+    }
+
+    .equipo-clinico-image img {
+      width: 100%;
+      height: auto;
+    }
+  }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".animate-on-scroll");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible"); // Añade la clase para activar la animación
+          observer.unobserve(entry.target); // Deja de observar una vez que es visible
+        }
+      });
+    });
+
+    elements.forEach((el) => observer.observe(el));
+  });
+</script>

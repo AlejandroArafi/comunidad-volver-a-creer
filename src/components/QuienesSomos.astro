@@ -1,12 +1,8 @@
----
-
----
-
 <section class="quienes-somos-container">
-  <div class="quienes-somos-text">
+  <div class="quienes-somos-text animate-on-scroll">
     <h2 class="quienes-somos-title">Quienes somos</h2>
     <p>
-      Nuestro Centro de Rehabilitación <span>Volver a Creer Chile</span>  Es un apoyo
+      Nuestro Centro de Rehabilitación <span>Volver a Creer Chile</span> es un apoyo
       fundamental en la prevención, formación y reinserción de nuestros
       pacientes. Les otorgamos los mecanismos y conocimientos idóneos para su
       desarrollo a través de un programa de rehabilitación integral, buscando
@@ -14,63 +10,73 @@
       residentes y sus familias.
     </p>
   </div>
-  <div class="quienes-somos-image">
-    <img src="./images/quienes-somos.jpeg" alt="" />
+  <div class="quienes-somos-image animate-on-scroll">
+    <img src="./images/quienes-somos.jpeg" alt="Centro de Rehabilitación" />
   </div>
 </section>
 
 <style>
+  .animate-on-scroll {
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(50px); /* Desplazado hacia abajo */
+    transition: all 0.6s ease-out; /* Transición más suave */
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1; /* Se hace visible */
+    transform: translateY(0); /* Vuelve a su posición inicial */
+  }
+
   .quienes-somos-container {
     display: flex;
     flex-direction: row;
-    align-items: center; /*sobra?*/
-    margin-top: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
     margin-bottom: 2rem;
-    padding: 1rem;
-    align-items: flex-start;
-    color: #000000;
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    text-align: center;
+    padding: 2rem;
+    background-color: #f7f7f7; /* Fondo cálido y acogedor */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-    justify-content: space-between;
   }
 
   .quienes-somos-text,
   .quienes-somos-image {
-    width: 48%; /* Asigna el 48% de ancho a cada uno */
+    width: 48%;
   }
+
   .quienes-somos-text {
-      width: 45%;
+    width: 45%;
   }
 
   .quienes-somos-title {
     font-family: "Montserrat", sans-serif;
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
     text-align: left;
-  }
-
-  .quienes-somos-container span {
-    font-weight: 900;
+    color: #2c3e50; /* Color oscuro y elegante */
+    
   }
 
   .quienes-somos-container p {
     font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
-    line-height: 1.5;
-    /*margin: 0 50px;*/
+    line-height: 1.6;
+    color: #34495e; /* Color suave y legible */
     text-align: left;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.150);
   }
 
   .quienes-somos-image img {
-    width: 100%; /* La imagen ocupa el 100% del ancho disponible */
-    height: auto; /* Mantiene la proporción de la imagen */
-
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados en la imagen */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil en la imagen */
   }
 
   /* Responsividad */
@@ -78,7 +84,7 @@
     .quienes-somos-container {
       width: 90%;
       flex-direction: column; /* Los elementos se apilan verticalmente */
-      text-align: left; /* Alineación del texto a la izquierda */
+      text-align: center; /* Centrar el texto */
     }
 
     .quienes-somos-text,
@@ -88,16 +94,33 @@
     }
 
     .quienes-somos-title {
-      font-size: 1.2rem; /* Tamaño de título más pequeño en pantallas pequeñas */
+      font-size: 1.5rem; /* Tamaño de título más pequeño en pantallas pequeñas */
     }
 
     .quienes-somos-container p {
-      font-size: 0.9rem; /* Tamaño de texto más pequeño en pantallas pequeñas */
+      font-size: 1rem; /* Ajuste de tamaño de texto */
     }
+
     .quienes-somos-image img {
-      width: 100%; /* La imagen ocupa el 100% del ancho disponible */
-      height: auto; /* Mantiene la proporción de la imagen */
+      width: 100%;
+      height: auto;
     }
   }
-
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".animate-on-scroll");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible"); // Añade la clase para activar la animación
+          observer.unobserve(entry.target); // Deja de observar una vez que es visible
+        }
+      });
+    });
+
+    elements.forEach((el) => observer.observe(el));
+  });
+</script>
