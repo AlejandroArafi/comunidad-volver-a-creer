@@ -27,18 +27,18 @@ import Layout from "../layouts/Layout.astro";
 
   <!-- Contenedor para las imágenes -->
   <div class="image-gallery">
-    <img src="./images/nuestra-comunidad-images/comunidad-1.jpeg" alt="" class="gallery-img">
+    <!--  <img src="./images/nuestra-comunidad-images/comunidad-1.jpeg" alt="" class="gallery-img">-->
     <img src="./images/nuestra-comunidad-images/comunidad-2.jpeg" alt="" class="gallery-img">
     <img src="./images/nuestra-comunidad-images/comunidad-3.jpeg" alt="" class="gallery-img">
     <img src="./images/nuestra-comunidad-images/comunidad-4.jpeg" alt="" class="gallery-img">
     <img src="./images/nuestra-comunidad-images/comunidad-5.jpeg" alt="" class="gallery-img">
     <img src="./images/nuestra-comunidad-images/comunidad-6.jpeg" alt="" class="gallery-img">
     <img src="./images/nuestra-comunidad-images/comunidad-7.jpeg" alt="" class="gallery-img">
-    <img src="./images/nuestra-comunidad-images/comunidad-8.jpeg" alt="" class="gallery-img">
-    <img src="./images/nuestra-comunidad-images/comunidad-9.jpeg" alt="" class="gallery-img">
+    <!-- <img src="./images/nuestra-comunidad-images/comunidad-8.jpeg" alt="" class="gallery-img"> -->
+    <!-- <img src="./images/nuestra-comunidad-images/comunidad-9.jpeg" alt="" class="gallery-img"> -->
     <img src="./images/nuestra-comunidad-images/comunidad-10.jpeg" alt="" class="gallery-img">
     <img src="./images/nuestra-comunidad-images/comunidad-11.jpeg" alt="" class="gallery-img">
-    <img src="./images/nuestra-comunidad-images/comunidad-12.jpeg" alt="" class="gallery-img">
+    <!-- <img src="./images/nuestra-comunidad-images/comunidad-12.jpeg" alt="" class="gallery-img">-->
     <img src="./images/nuestra-comunidad-images/comunidad-13.jpeg" alt="" class="gallery-img">
     <img src="./images/nuestra-comunidad-images/comunidad-14.jpeg" alt="" class="gallery-img">
     <img src="./images/nuestra-comunidad-images/comunidad-15.jpeg" alt="" class="gallery-img">
@@ -51,6 +51,8 @@ import Layout from "../layouts/Layout.astro";
   <div id="image-modal" class="modal">
     <span id="close-modal" class="close">&times;</span>
     <img id="modal-image" class="modal-content" />
+    <span id='prev' class='nav prev'>&lt;</span>
+    <span id='next' class='nav next'>&gt;</span>
   </div>
 
   <style>
@@ -189,6 +191,27 @@ import Layout from "../layouts/Layout.astro";
       cursor: pointer;
     }
 
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: white;
+      z-index: 1000;
+      user-select: none;
+    }
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+    .nav:hover {
+      color: #075e54;   
+    }
+
     @media (max-width: 768px) {
 
       .nuestra-comunidad-container {
@@ -285,11 +308,22 @@ import Layout from "../layouts/Layout.astro";
     const modal = document.getElementById('image-modal');
     const modalImage = document.getElementById('modal-image');
     const closeModal = document.getElementById('close-modal');
+    const prevButton = document.getElementById('prev');
+   const nextButton = document.getElementById('next');
 
-    images.forEach(image => {
+   let currentIndex = 0;
+
+   const showImage = (index) => {
+    modalImage.src = images[index].src;
+    currentIndex = index;
+  };
+
+
+
+    images.forEach((image, index) => {
       image.addEventListener('click', () => {
         modal.style.display = 'flex';
-        modalImage.src = image.src; // Establecer la imagen en el modal
+       showImage(index);
       });
     });
 
@@ -302,5 +336,27 @@ import Layout from "../layouts/Layout.astro";
         modal.style.display = 'none';
       }
     });
+
+    prevButton.addEventListener('click', () => {
+        const newIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(newIndex);
+      });
+
+      nextButton.addEventListener('click', () => {
+        const newIndex = (currentIndex + 1) % images.length;
+        showImage(newIndex);
+      });
+
+      window.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') {
+          const newIndex = (currentIndex - 1 + images.length) % images.length;
+          showImage(newIndex);
+        } else if (event.key === 'ArrowRight') {
+          const newIndex = (currentIndex + 1) % images.length;
+          showImage(newIndex);
+        }
+      });
+
+  
   </script>
 </Layout>

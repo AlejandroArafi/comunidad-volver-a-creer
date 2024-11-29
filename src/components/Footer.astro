@@ -4,19 +4,44 @@
     <div class="footer-column">
       <h3>Comunidad Volver a Creer</h3>
       <p>
-        <i class="fas fa-map-marker-alt"></i> 
-        <a href="https://goo.gl/maps/example" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-map-marker-alt"></i>
+        <a
+          href="https://goo.gl/maps/example"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Talagante, Región Metropolitana
         </a>
       </p>
       <p>
-        <i class="fas fa-phone-alt"></i> 
+        <i class="fas fa-phone-alt"></i>
         <a href="tel:+56223456789">+56 2 2345 6789</a>
       </p>
       <p>
-        <i class="fas fa-clock"></i> 
+        <i class="fas fa-clock"></i>
         Lunes a viernes: 9:00 a.m. - 5:00 p.m.
       </p>
+    </div>
+
+    <div class="footer-rrss">
+      <h3>Redes sociales</h3>
+      <a
+        href="https://www.facebook.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-twitter"></i>
+      </a>
     </div>
   </div>
 
@@ -29,11 +54,10 @@
 <style>
   /* Estilos generales del footer */
   .footer {
-    background: linear-gradient(135deg, #E6F7F1, #FDF7E6); /* Degradado suave */
+    background: linear-gradient(135deg, #e6f7f1, #fffbef); 
     padding: 2rem 1rem;
-    color: #5A5A5A; /* Gris cálido */
+    color: #5a5a5a; /* Gris cálido */
     font-family: "Montserrat", sans-serif;
-    position: relative;
     margin-top: auto;
     width: 100%;
     box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
@@ -41,92 +65,111 @@
 
   .footer-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1.5rem;
+    flex: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
   }
 
   .footer-column {
-    max-width: 600px;
+    flex: 1 1 300px;
+    max-width: 450px;
+    text-align: left;
+    padding-left: 4rem;
   }
 
   .footer-column h3 {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #2A6359; /* Verde oscuro */
+    color: #2a6359; /* Verde oscuro */
     margin-bottom: 1rem;
   }
 
   .footer-column p {
     font-size: 1rem;
-    margin-bottom: 0.8rem;
-    color: #5A5A5A;
-  }
-
-  .footer-column p i {
-    color: #38B2A6; /* Verde menta */
-    margin-right: 0.5rem;
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-
-  .footer-column p:hover i {
-    transform: scale(1.2); /* Animación al pasar el ratón */
-    color: #2A6359; /* Verde oscuro */
+    margin-bottom: 0.5rem;
   }
 
   .footer-column a {
-    color: #38B2A6;
+    color: #38b2a6;
     text-decoration: none;
     transition: color 0.3s ease;
   }
 
   .footer-column a:hover {
-    color: #2A6359; /* Verde oscuro */
+    color: #2a6359; /* Verde oscuro */
   }
 
+  .icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: #38b2a6; /* Verde menta */
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .footer-column p i:hover {
+transform: rotate(10deg) scale(1.2); /* Rotar el icono al pasar el ratón */
+  }
+
+
+
+  .footer-rrss a{
+    display: inline-block;
+    margin: 0 1rem;
+    color: #38b2a6; /* Verde menta */
+    font-size: 2rem;
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .footer-rrss a:hover {
+    color: #FF8C42; /* Verde oscuro */
+    transform: scale(1.2);
+  }
+  
+
+ 
   /* Barra inferior */
   .footer-bottom {
     margin-top: 1.5rem;
-    background-color: #2A6359; /* Verde oscuro */
+    background-color: #2a6359; /* Verde oscuro */
     padding: 0.8rem;
     color: #ffffff;
     font-size: 0.9rem;
     text-align: center;
-    border-top: 2px solid #38B2A6; /* Línea de acento */
+    border-top: 2px solid #38b2a6; /* Línea de acento */
   }
 
   /* Responsividad */
   @media (max-width: 768px) {
-    .footer {
-      padding: 1.5rem 1rem;
-    }
-
-    .footer-column h3 {
-      font-size: 1.6rem;
-    }
-
-    .footer-column p {
-      font-size: 0.95rem;
-    }
-  }
-
-  @media (max-width: 480px) {
     .footer-container {
-      gap: 1rem;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
-    .footer-column h3 {
-      font-size: 1.4rem;
+    .footer-column {
+      max-width: 100%;
+      padding-left: 0;
     }
+    
 
-    .footer-column p {
+    .footer-container h3 {
+      font-size: 1.3rem;
+      text-align: center;
+    }
+    .footer-container p {
       font-size: 0.9rem;
+      margin-bottom: 1rem;
     }
+    .footer-rrss a {
+      margin: 0.5rem;
+      font-size: 2rem;
+    }  
 
-    .footer-bottom {
-      font-size: 0.8rem;
-    }
+  
+   
   }
 </style>
 
@@ -134,5 +177,4 @@
 <script
   src="https://kit.fontawesome.com/a076d05399.js"
   crossorigin="anonymous"
-  defer
-></script>
+  defer></script>
