@@ -222,10 +222,10 @@ const ContactForm = () => {
 
     try {
       await emailjs.send(
-        "service_58j816s", // Reemplaza con tu service_id
-        "template_olvwodd", // Reemplaza con tu template_id
+        "service_udlojh6", // Reemplaza con tu service_id
+        "template_s9pfams", // Reemplaza con tu template_id
         templateParams, // Los parámetros a enviar en el correo
-        "DNvc9OhWpaYeuHXQN", // Reemplaza con tu user_id
+        "YT3E1nQa1n65085WQ", // Reemplaza con tu user_id
       );
       alert("¡Mensaje enviado con éxito!");
       setFormData({ name: "", email: "", phone: "", message: "" }); // Limpiar formulario

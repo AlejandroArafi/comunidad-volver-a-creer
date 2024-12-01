@@ -1,13 +1,14 @@
-import emailjs from "emailjs-com";
+import emailjs from '@emailjs/browser';
 
-
-window.onload = function () {
+// Lógica principal para manejar el formulario
+document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("formulario");
+
   if (form) {
     form.addEventListener("submit", function (event) {
       event.preventDefault();
 
-      // Obtenemos los valores del formulario
+      // Obtenemos los valores de los campos
       const name = document.getElementById("name").value;
       const email = document.getElementById("email").value;
       const phone = document.getElementById("phone").value;
@@ -20,25 +21,26 @@ window.onload = function () {
         message: message,
       };
 
-      // Usamos la función de EmailJS para enviar el correo
+      // Envío con EmailJS
       emailjs
         .send(
           "service_udlojh6", // Service ID
           "template_s9pfams", // Template ID
-          templateParams, // Los parámetros del formulario
-          "YT3E1nQa1n65085WQ", // User ID (public key)
+          templateParams, // Parámetros del formulario
+          "YT3E1nQa1n65085WQ", // Public Key (User ID)
         )
         .then(
-          function (response) {
+          function () {
             alert("¡Mensaje enviado exitosamente!");
+            form.reset(); // Limpiar el formulario
           },
           function (error) {
-            alert(
-              "Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.",
-            );
-            console.error("Error al enviar el correo:", error);
+            alert("Hubo un error al enviar el mensaje. Intenta de nuevo.");
+            console.error("Error:", error);
           },
         );
     });
+  } else {
+    console.warn("No se encontró el formulario con el ID 'formulario'.");
   }
-};
+});
