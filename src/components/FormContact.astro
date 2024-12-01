@@ -1,10 +1,13 @@
-<!-- HTML -->
+---
+
+---
+
 <div class="form-title-container">
   <h3>Agenda una visita con nosotros</h3>
 </div>
 
 <div class="form-container">
-  <form class="formulario" action="/api/sendForm" method="post">
+  <form class="formulario" id="formulario">
     <!-- Nombre -->
     <div class="input-container">
       <i class="fas fa-user"></i>
@@ -14,7 +17,7 @@
     <!-- Email -->
     <div class="input-container">
       <i class="fas fa-envelope"></i>
-      <input type="email" id="email" name="email" placeholder="Correo electrónico" />
+      <input type="email" id="email" name="email" placeholder="Correo electrónico" required />
     </div>
 
     <!-- Teléfono -->
@@ -26,7 +29,7 @@
     <!-- Mensaje -->
     <div class="input-container">
       <i class="fas fa-edit textarea-icon"></i>
-      <textarea  id="message" name="message"  placeholder=  "Cuéntanos cómo podemos ayudarte"></textarea>
+      <textarea id="message" name="message" placeholder="Cuéntanos cómo podemos ayudarte" required></textarea>
     </div>
 
     <!-- Botón de envío -->
@@ -34,135 +37,129 @@
   </form>
 </div>
 
-<!-- CSS -->
 <style>
-/* RESET Y TIPOGRAFÍA BASE */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  /* Aquí va el mismo CSS que has provisto */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  color: #333;
-  background-color: #f9f9f9;
-}
-
-.form-title-container h3 {
-  color: #444;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-/* CONTENEDORES PRINCIPALES */
-.form-title-container {
-  text-align: center;
-  margin: 4rem auto 2rem;
-}
-
-.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.form-container .formulario {
-  width: 100%;
-  max-width: 500px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
-  padding: 2rem;
-}
-
-/* INPUTS */
-.input-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-
-.input-container i {
-  position: absolute;  
-  left: 12px;
-  color: #888;
-}
-
-.textarea-icon {
-  top: 12px;
-}
-
-
-
-
-input,
-textarea {
-  width: 100%;
-  padding: 12px 20px;
-  padding-left: 40px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  font-size: 1rem;
-  color: #333;
-  transition: border-color 0.3s;
-}
-
-input:focus,
-textarea:focus {
-  border-color: #8bc34a;
-  outline: none;
-}
-
-textarea {
-  resize: none;
-  height: 100px;
-}
-
-/* BOTÓN */
-.form-button {
-  width: 100%;
-  padding: 12px;
-  background-color: #8bc34a;
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.form-button:hover {
-  background-color: #7cb342;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* HR */
-hr {
-  border: none;
-  border-top: 2px solid #eee;
-  margin: 2rem 0;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .formulario {
-    padding: 1.5rem;
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
   }
 
   .form-title-container h3 {
-    font-size: 1.2rem;
+    color: #444;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-title-container {
+    text-align: center;
+    margin: 4rem auto 2rem;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .form-container .formulario {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+  }
+
+  .input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    position: relative;
   }
 
   .input-container i {
-    display: none;
+    position: absolute;
+    left: 12px;
+    color: #888;
   }
-}
+
+  .textarea-icon {
+    top: 12px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px 20px;
+    padding-left: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: #8bc34a;
+    outline: none;
+  }
+
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+
+  .form-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #8bc34a;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .form-button:hover {
+    background-color: #7cb342;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  hr {
+    border: none;
+    border-top: 2px solid #eee;
+    margin: 2rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .formulario {
+      padding: 1.5rem;
+    }
+
+    .form-title-container h3 {
+      font-size: 1.2rem;
+    }
+
+    .input-container i {
+      display: none;
+    }
+  }
 </style>
+
+
+<script type="module" src="/form-contact.js"></script>
