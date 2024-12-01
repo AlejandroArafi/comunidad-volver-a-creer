@@ -8,29 +8,22 @@ import Carrusel from '../components/Carrusel.jsx';
 import QuienesSomos from '../components/QuienesSomos.astro';
 import EquipoClinico from '../components/EquipoClinico.astro';
 import Footer from '../components/Footer.astro';
-
-
 ---
 
 <Layout title="Comunidad Volver a Creer"> 
   
-   
     <main>
        <Hero/>
-      
-
-    <Carrusel client:load/>
-    
-     
+       <Carrusel client:load/>
     </main>
+    
     <section>
         <QuienesSomos/>
-      <EquipoClinico/>
+        <EquipoClinico/>
     </section>
 
-
-    <!-- Script del formulario -->
-     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-   <script type="module" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </Layout>
 
+<!-- Coloca los scripts aquí, antes de cerrar la etiqueta </body> -->
+<script type="module" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="module" src="/form-contact.js"></script>

@@ -1,3 +1,6 @@
+import emailjs from "emailjs-com";
+
+
 window.onload = function () {
   const form = document.getElementById("formulario");
   if (form) {
@@ -20,10 +23,10 @@ window.onload = function () {
       // Usamos la función de EmailJS para enviar el correo
       emailjs
         .send(
-          "service_udlojh6", // service ID
-          "template_s9pfams", // template ID
-          templateParams, // los parámetros del formulario
-          "YT3E1nQa1n65085WQ", // user ID (public key)
+          "service_udlojh6", // Service ID
+          "template_s9pfams", // Template ID
+          templateParams, // Los parámetros del formulario
+          "YT3E1nQa1n65085WQ", // User ID (public key)
         )
         .then(
           function (response) {
