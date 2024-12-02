@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "./carrusel.css";
 
-const images = ["/images/c1.jpg", "/images/c2.jpg", "/images/c3.jpg", "/images/c4.jpg", "/images/c5.jpg", "/images/c6.jpg"];
+const images = ["/images/c1.jpg", "/images/c3.jpg", "/images/c4.jpg", "/images/c5.jpg", "/images/c7.jpg"];
 
 const Carrusel = () => {
   return (
