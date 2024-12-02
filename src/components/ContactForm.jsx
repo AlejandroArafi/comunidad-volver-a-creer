@@ -30,11 +30,11 @@ const ContactForm = () => {
       await emailjs.send(
         "service_udlojh6", // Reemplaza con tu service_id
         "template_s9pfams", // Reemplaza con tu template_id
-        templateParams, // Los parámetros a enviar en el correo
+        templateParams,
         "YT3E1nQa1n65085WQ", // Reemplaza con tu user_id
       );
       alert("¡Mensaje enviado con éxito!");
-      setFormData({ name: "", email: "", phone: "", message: "" }); // Limpiar formulario
+      setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
       console.error("Error al enviar el mensaje:", error);
       alert("Hubo un error al enviar el mensaje. Intenta nuevamente.");
@@ -44,124 +44,145 @@ const ContactForm = () => {
   // Estilos en objeto
   const styles = {
     formContainer: {
-      width: "100%",
-      maxWidth: "600px",
-      margin: "0 auto",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
       padding: "20px",
-      backgroundColor: "#f4f4f4",
-      borderRadius: "8px",
-      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
     },
-    formGroup: {
-      marginBottom: "20px",
+    formTitleContainer: {
+      textAlign: "center",
+      margin: "4rem auto 2rem",
     },
-    formLabel: {
-      display: "block",
-      fontSize: "14px",
-      fontWeight: "bold",
-      color: "#333",
-      marginBottom: "5px",
+    formTitle: {
+      color: "#444",
+      fontSize: "1.5rem",
+      marginBottom: "1rem",
     },
-    formInput: {
+    form: {
       width: "100%",
-      padding: "10px",
-      fontSize: "16px",
-      border: "1px solid #ccc",
-      borderRadius: "4px",
-      backgroundColor: "#fff",
-      color: "#333",
+      maxWidth: "500px",
+      backgroundColor: "#ffffff",
+      borderRadius: "12px",
+      boxShadow: "0 4px 15px rgba(0, 0, 0, 0.1)",
+      padding: "2rem",
     },
-    formInputFocus: {
-      borderColor: "#4CAF50",
-      outline: "none",
+    inputContainer: {
+      display: "flex",
+      alignItems: "center",
+      marginBottom: "1.5rem",
+      position: "relative",
     },
-    formTextarea: {
+    icon: {
+      position: "absolute",
+      left: "12px",
+      color: "#888",
+    },
+    textareaIcon: {
+      top: "12px",
+    },
+    input: {
       width: "100%",
-      padding: "10px",
-      fontSize: "16px",
-      border: "1px solid #ccc",
-      borderRadius: "4px",
-      backgroundColor: "#fff",
-      color: "#333",
-      minHeight: "150px",
-      resize: "vertical",
-    },
-    formButton: {
-      backgroundColor: "#4CAF50",
-      color: "white",
       padding: "12px 20px",
-      fontSize: "16px",
-      border: "none",
-      borderRadius: "4px",
-      cursor: "pointer",
-      width: "100%",
+      paddingLeft: "40px",
+      border: "1px solid #ddd",
+      borderRadius: "8px",
+      backgroundColor: "#f9f9f9",
+      fontSize: "1rem",
+      color: "#333",
+      transition: "border-color 0.3s",
     },
-    formButtonHover: {
-      backgroundColor: "#45a049",
+    inputFocus: {
+      borderColor: "#8bc34a",
+    },
+    textarea: {
+      resize: "none",
+      height: "100px",
+    },
+    button: {
+      width: "100%",
+      padding: "12px",
+      backgroundColor: "#8bc34a",
+      color: "#ffffff",
+      fontSize: "1rem",
+      fontWeight: "bold",
+      textTransform: "uppercase",
+      border: "none",
+      borderRadius: "8px",
+      cursor: "pointer",
+      transition: "background-color 0.3s ease",
+    },
+    buttonHover: {
+      backgroundColor: "#7cb342",
+      boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
     },
   };
 
   return (
-    <form onSubmit={submitForm} style={styles.formContainer}>
-      <div style={styles.formGroup}>
-        <label htmlFor="name" style={styles.formLabel}>
-          Nombre
-        </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          style={styles.formInput}
-          required
-        />
+    <div style={styles.formContainer}>
+      <div style={styles.formTitleContainer}>
+        <h3 style={styles.formTitle}>Agenda una visita con nosotros</h3>
       </div>
-      <div style={styles.formGroup}>
-        <label htmlFor="email" style={styles.formLabel}>
-          Correo electrónico
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          style={styles.formInput}
-          required
-        />
-      </div>
-      <div style={styles.formGroup}>
-        <label htmlFor="phone" style={styles.formLabel}>
-          Teléfono
-        </label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-          style={styles.formInput}
-          required
-        />
-      </div>
-      <div style={styles.formGroup}>
-        <label htmlFor="message" style={styles.formLabel}>
-          Mensaje
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          style={styles.formTextarea}
-          required
-        ></textarea>
-      </div>
-      <button type="submit" style={styles.formButton}>
-        Enviar
-      </button>
-    </form>
+      <form style={styles.form} onSubmit={submitForm}>
+        <div style={styles.inputContainer}>
+          <i className="fas fa-user" style={styles.icon}></i>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Nombre completo"
+            value={formData.name}
+            onChange={handleChange}
+            style={styles.input}
+            required
+          />
+        </div>
+        <div style={styles.inputContainer}>
+          <i className="fas fa-envelope" style={styles.icon}></i>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Correo electrónico"
+            value={formData.email}
+            onChange={handleChange}
+            style={styles.input}
+            required
+          />
+        </div>
+        <div style={styles.inputContainer}>
+          <i className="fas fa-phone-alt" style={styles.icon}></i>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Teléfono de contacto"
+            value={formData.phone}
+            onChange={handleChange}
+            style={styles.input}
+            required
+          />
+        </div>
+        <div style={styles.inputContainer}>
+          <i
+            className="fas fa-edit"
+            style={{ ...styles.icon, ...styles.textareaIcon }}
+          ></i>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Cuéntanos cómo podemos ayudarte"
+            value={formData.message}
+            onChange={handleChange}
+            style={{ ...styles.input, ...styles.textarea }}
+            required
+          ></textarea>
+        </div>
+        <button type="submit" style={styles.button}>
+          Enviar
+        </button>
+      </form>
+    </div>
   );
 };
 
